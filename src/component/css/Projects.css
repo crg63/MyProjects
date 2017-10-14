@@ -1,0 +1,17 @@
+.Projects {
+	background-image:url("../../img/clavier.jpg");
+	
+}
+
+.Projects img{
+	height: 200px;
+}
+
+
+.Project {
+	background: #222;
+    border-radius: 5px;
+    margin: 15px -15px 0px -15px;
+    color: #FFF;
+    padding: 1px 0px 15px 15px;
+}

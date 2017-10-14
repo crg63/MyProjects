@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+.NextPage {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: #FFF;
+	display: flex;
+	margin: auto;
+	margin-top: 15%;
+}
+
+.NextPage a {
+	text-align: center;
+	font-family: 'Comfortaa', cursive;
+    font-size: 2em;
+    height: 100%;
+    width: 100%;
+}
