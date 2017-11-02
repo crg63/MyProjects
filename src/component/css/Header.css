@@ -1,7 +1,11 @@
 
 .Header {
   height: 70px;
-  position: relative;
+  transition: top .4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1;
 }
 
 /* Menu global */
@@ -14,7 +18,7 @@
 /* Menu de niveau 1 */
 .Header nav {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   background-color: #fff;
   height: 100%;
 }
@@ -44,9 +48,9 @@
   border-bottom: 1px solid #222;
   border-left: 1px solid #222;
   border-right: 1px solid #222;
-  border-radius: 0 3px 3px;
+  border-radius: 0 4px 4px;
   box-shadow: 5px 5px 5px #888888;
-  transition: all 0.5s ease-in-out 0s, visibility 0s linear 0.3s, opacity 0.4s, z-index 0s linear 0.01s;
+  transition: all 0.5s ease-in-out 0s, visibility 0s, linear 0.3s, opacity 0.4s;
   text-align: center; 
 }
 
@@ -58,7 +62,7 @@
 }
 
 .circle {
-  z-index: 0;
+  z-index: 1;
   display: block;
   width: 60px;
   height: 60px;
@@ -67,27 +71,23 @@
   position: absolute;
   top: 35px;
   transform: translate(-50%);
-  left: 50% 
+  left: 50%;
+  cursor: pointer;
 }
+
 .circle img {
   height: 60px;
   width: 60px;
 }
 
-.UpDownMenu {
-  opacity: 0;
-  animation: UpDownMenu 1s;
+
+.MenuDeep header {
+  position: fixed;
+  top: -70px;
+  transition: top .4s;
 }
 
-@keyframes UpDownMenu {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
+/* ICI temporairement => { */
 
 @media (min-width: 769px) {
   * {

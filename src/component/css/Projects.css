@@ -1,12 +1,18 @@
 .Projects {
 	background-image:url("../../img/clavier.jpg");
-	
+	padding-top: 70px;
+	background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.Projects .BlockPrincipal {
+	margin-bottom: 15%;
 }
 
 .Projects img{
 	height: 200px;
 }
-
 
 .Project {
 	background: #222;
@@ -15,3 +21,17 @@
     color: #FFF;
     padding: 1px 0px 15px 15px;
 }
+
+
+
+/*h2 {
+	position: relative;
+	top: 0;
+	transition: top .4s,
+}*/
+/*
+.MenuDeep h2 {
+position: relative;
+top: -50px;
+transition: top .4s;	
+}*/

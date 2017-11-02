@@ -2,23 +2,20 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.MenuDeep main {
+  top: 0;
+  transition: top .4s;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+#root {
+    overflow: hidden;
 }
 
-.App-intro {
-  font-size: large;
+.BlockPrincipal {
+  margin-top: 15%;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.Projects h2,
+.Contact h2 {
+  color: #FFF;
 }

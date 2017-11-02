@@ -1,6 +1,50 @@
-.Contact .contactForm {
-	
+.Contact {
+	background-image:url("../../img/phone.png");
+    width: 100%;
+    height: calc(100vh);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: 50% 100%;
+	padding-top: 70px;
+
+}
+
+.contactForm {
 	border-radius: 3px;
-	border: 1px solid #EEE;
 	padding: 10px;
+	width: 60%;
+	position: relative;
+	left: 15%;
+	top: 35%;
+}
+
+.contactForm div {
+	display: flex;
+	padding: 5%;
+}
+
+.contactForm div:nth-child(-n+2) .formField {
+	width: 50% !important;
+}
+
+.Contact label {
+	white-space: nowrap;
+}
+
+.formField {
+	position: absolute;
+	right: 0;
+}
+
+
+/* _________ Adaptation to bootsrap _________ */ 
+
+.form-control {
+	width: inherit;
+}
+
+
+.MenuDeep  {
+
 }
