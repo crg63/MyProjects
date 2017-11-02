@@ -47,7 +47,7 @@ const Project = () => (
 					
 					<div className="NextPageBlock">
 						<div className="NextPage"> 
-	          				<Link to='/Presentation'> ? </Link>
+	          				<Link to='/Presentation'> {"<"} </Link>
 
 	          			</div>
 	          			<div className="NextPage">

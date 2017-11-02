@@ -35,7 +35,7 @@ const Contact = () => (
 						</form>
 					</div>
 					<div className="NextPage">   
-						<Link to='/Projects'> ? </Link>  
+						<Link to='/Projects'> {"<"} </Link>  
 					</div>
 				</Col>
 			</Row>
