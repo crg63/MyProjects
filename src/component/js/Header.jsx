@@ -37,9 +37,9 @@ const Header = () => (
           <li>
             <Link to='/Projects'>Projects</Link> 
             <ul>
-              <li> <Link to='/Projects#1'>Project one</Link> </li>
-              <li> <Link to='/Projects#2'>Project tow</Link> </li>
-              <li> <Link to='/Projects#3'>Project three</Link> </li>
+              <li> <Link to='/Projects#1'>one</Link> </li>
+              <li> <Link to='/Projects#2'>tow</Link> </li>
+              <li> <Link to='/Projects#3'>three</Link> </li>
             </ul>
           </li>
           <li><Link to='/Contact'>Contact</Link></li>

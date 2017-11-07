@@ -12,8 +12,10 @@
 
 
 .Presentation .NextPage {
-	margin: auto;
-	margin-top: 10%;
+
+	position: absolute;
+	left: 45%;
+	bottom: 3%;
 }
 
 .NextPage {
@@ -31,3 +33,4 @@
     height: 100%;
     width: 100%;
 }
+

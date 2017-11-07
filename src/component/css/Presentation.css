@@ -19,7 +19,7 @@
 	margin: 10% auto;
 	border-radius: 4px 0 0 4px;
 	display: block;
-	height: 40px;
+	height: 30px;
 	width: 100%;
 	max-width: 300px;
 }
@@ -53,22 +53,26 @@
 .blocPesentation {
 	background-color: #FFF;
 	border-radius: 4px;
-	margin-top: 10%;
-	padding: 10% 0;
+	padding: 10%;
+	height: 55%;
+	display: flex;
 }
 
+.MenuDeep .BlockPrincipal {
+	margin: auto;
+}
+
+
 .blocPesentation p {
-	margin-left: 15%;
-	margin-right: 15%;
-	position: relative;
-	top: 10%;
 	text-align: center;
+	margin: auto;
 }
 
 /* _________ Adaptation to bootsrap _________ */ 
 
 .Presentation .show-grid.row,
-.Presentation .col-xs-10 {
+.Presentation .col-xs-10,
+.BlockPrincipal {
 	height: 100%
 }
 
@@ -83,3 +87,7 @@
 		font-size: 14px;
 	}
 }
+
+
+
+
