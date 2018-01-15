@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import Presentation from '../component/js/Presentation.jsx'
 import Project from '../component/js/Project.jsx'
 import Contact from '../component/js/Contact.jsx'
-
+import Header from '../component/js/Header.jsx'
 
 // The Main component renders one of the three provided
 // Routes (provided that one matches). Both the /roster
@@ -12,6 +12,7 @@ import Contact from '../component/js/Contact.jsx'
 // when the pathname is exactly the string "/"
 const Main = () => (
   <main>
+  	<Header />
     <Switch>
     	<Route exact path='/' component={Presentation}/>
 		<Route path='/Presentation' component={Presentation}/>

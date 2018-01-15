@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../css/Header.css'
+import {ProjectsInfos} from './Project.jsx'
 
 // The Header creates links that can be used to navigate
 // between routes.
@@ -19,15 +20,17 @@ import '../css/Header.css'
 
 // test()
 
-
+ const projects = ProjectsInfos.map( (project) =>
+  <li key={project.id}>
+    <Link to={'/Projects#' + project.name.split(' ').join('-')} >{project.name}</Link> 
+  </li>
+)
 
 const UpDownMenu = () => {
       document.querySelector('.circle').addEventListener('click', () => {
       document.querySelector('#root').classList.toggle('MenuDeep')      
   })
 }
-
-
 
 const Header = () => (
     <header className="Header">
@@ -37,9 +40,7 @@ const Header = () => (
           <li>
             <Link to='/Projects'>Projects</Link> 
             <ul>
-              <li> <Link to='/Projects#1'>one</Link> </li>
-              <li> <Link to='/Projects#2'>tow</Link> </li>
-              <li> <Link to='/Projects#3'>three</Link> </li>
+            {projects}
             </ul>
           </li>
           <li><Link to='/Contact'>Contact</Link></li>

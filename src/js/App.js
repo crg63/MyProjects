@@ -1,12 +1,10 @@
 import React from 'react'
-import Main from './Main'
+import Main from './Main.jsx'
 import '../css/App.css'
-import Header from '../component/js/Header.jsx'
 
 
 const App = () => (
   <div>
-    <Header />
     <Main />
   </div>
 )
