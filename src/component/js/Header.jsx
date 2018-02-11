@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom'
 import '../css/Header.css'
 import {ProjectsInfos} from './Project.jsx'
 
+
+
 // The Header creates links that can be used to navigate
 // between routes.
 
@@ -44,6 +46,7 @@ const Header = () => (
             </ul>
           </li>
           <li><Link to='/Contact'>Contact</Link></li>
+          <li>  </li> 
         </ul>
       </nav>
         <span className="circle"  onClick={UpDownMenu} ><img src={require('../../img/digi.png')} alt="Open close menu" /> </span>
