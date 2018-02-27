@@ -62,7 +62,7 @@ const Project = () => (
 )
 
 
-console.log(projects)
+// console.log(projects)
 
 export default Project
 

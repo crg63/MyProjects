@@ -35,4 +35,4 @@ export default ReactGoogleAuth({
 })(Example);
 
 
-console.log(SignIn)
+// console.log(SignIn)
