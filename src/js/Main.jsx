@@ -4,7 +4,7 @@ import Presentation from '../component/js/Presentation.jsx'
 import Project from '../component/js/Project.jsx'
 import Contact from '../component/js/Contact.jsx'
 import Header from '../component/js/Header.jsx'
-import ReactGoogleAuth from '../component/js/google.jsx'
+// import ReactGoogleAuth from '../component/js/google.jsx'
 
 
 // The Main component renders one of the three provided
@@ -15,13 +15,11 @@ import ReactGoogleAuth from '../component/js/google.jsx'
 const Main = () => (
   <main>
   	<Header />
-  	<ReactGoogleAuth />
     <Switch>
-    <Route exact path='/' component={Presentation}/>
-		<Route path='/Presentation' component={Presentation}/>
-		<Route path='/Projects' component={Project}/>
-		<Route path='/Contact' component={Contact}/>
-		<Route path='/google' component={ReactGoogleAuth}/>
+      <Route exact path='/' component={Presentation}/>
+  		<Route path='/Presentation' component={Presentation}/>
+  		<Route path='/Projects' component={Project}/>
+  		<Route path='/Contact' component={Contact}/>
     </Switch>
   </main>
 )

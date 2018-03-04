@@ -1,21 +1,55 @@
-.App {
-  text-align: center;
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	overflow-x: hidden;
 }
 
-.MenuDeep main {
-  top: 0;
-  transition: top .4s;
+body, 
+html,
+#root,
+#root > div,
+main,
+.Presentation,
+.Projects,
+.Contact {
+    height: 100%;
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+		text-decoration: none;
+}
+
+li {
+		list-style: none;
+}
+
+h2 {
+	text-align: center;
+}
+
+.App {
+	text-align: center;
 }
 
 #root {
-    overflow: hidden;
+		overflow: hidden;
 }
 
-.BlockPrincipal {
-  margin-top: 15%;
+
+
+
+.Presentation,
+.Projects,
+.Contact {
+		top: 70px;
+		position: relative;
 }
 
 .Projects h2,
 .Contact h2 {
-  color: #FFF;
+	color: #FFF;
 }

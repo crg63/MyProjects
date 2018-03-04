@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Grid, Row, Col} from 'react-bootstrap'
 import '../css/Projects.css'
 
 
@@ -39,25 +38,19 @@ export const projects = ProjectsInfos.map( (project) =>
 
 const Project = () => (
 	<div className="Projects" id="Projects">
-		<Grid>
-			<Row className="show-grid">
-				<Col xs={10} xsOffset={1}>
-					<div className="BlockPrincipal">
-						<h2 className="banner">Projects</h2>
-						{projects}
-					</div>
-					
-					<div className="NextPageBlock">
-						<div className="NextPage"> 
-	          				<Link to='/Presentation'> {"<"} </Link>
-	          			</div>
-	          			<div className="NextPage">
-	          				<Link to='/Contact'> > </Link>   
-	          			</div>
-          			</div>
-				</Col>
-			</Row>
-		</Grid>
+		<div className="BlockPrincipal">
+			<h2 className="banner">Projects</h2>
+			{projects}
+		</div>
+		
+		<div className="NextPageBlock">
+			<div className="NextPage"> 
+					<Link to='/Presentation'> {"<"} </Link>
+				</div>
+				<div className="NextPage">
+					<Link to='/Contact'> > </Link>   
+				</div>
+			</div>
 	</div>
 )
 

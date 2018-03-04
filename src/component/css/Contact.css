@@ -5,9 +5,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 50% 100%;
-	padding-top: 70px;
-
+    background-position: 50% 50%;
 }
 
 .contactForm {
@@ -20,27 +18,7 @@
 	padding: 5%;
 }
 
-.contactForm div:nth-child(-n+2) .formField {
-	width: 50% !important;
-}
 
 .Contact label {
 	white-space: nowrap;
-}
-
-.formField {
-	position: absolute;
-	right: 0;
-}
-
-
-/* _________ Adaptation to bootsrap _________ */ 
-
-.form-control {
-	width: inherit;
-}
-
-
-.MenuDeep  {
-
 }

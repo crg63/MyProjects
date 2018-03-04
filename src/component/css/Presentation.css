@@ -1,41 +1,39 @@
 .Presentation {
-	background-image:url("../../img/crg-crea.jpg");
+	background-image:url(https://images.pexels.com/photos/196658/pexels-photo-196658.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
 	background-position-x: 10%;
 	width: 100%;
 	height:  calc(100vh);
-	padding-top: 70px;
-}
-
-.Presentation h4 {
-	text-align: center;
-	color: #000;
-	vertical-align: center;
-
-}
-
-.Presentation .typeWriter {
-	background: rgba(96, 106, 164, .7);
-	padding: 2%;
-	margin: 10% auto;
-	border-radius: 4px 0 0 4px;
-	display: block;
-	height: 30px;
-	width: 100%;
-	max-width: 300px;
-}
-
-.line-1{
-	border-right: 2px solid rgba(255,255,255,.75);
-	white-space: nowrap;
-	overflow: hidden;
-	transform: translateY(-50%);    
+	    background-position: center;
+	background-repeat: no-repeat;
 }
 
 /* _________ Animation type writer _________ */
-.anim-typewriter{
-	animation: typewriter 4s steps(32) 1s 1 normal both,
-	blinkTextCursor 600ms steps(32) infinite normal;
+
+
+.Presentation .typeWriter {
+	background: rgba(96, 106, 164, .7);
+	width: 100%;
+	max-width: 305px;
+	margin: auto;
+	padding-left: 55px;
+	text-align: center;
+	color: #000;
+	vertical-align: center;
 }
+
+.animTypeWriter {
+	animation: typewriter 4s steps(32) 1s 1 normal both,
+	blinkTextCursor 600ms steps(32) infinite normal,
+	stop 600ms steps(32) 5s infinite normal;
+	margin-bottom: 0;
+}
+
+.animTypeWriter2 {
+	animation: typewriter 4s steps(32) 5s 1 normal both,
+	blinkTextCursor 600ms steps(32) 5s infinite normal;
+
+}
+
 
 @keyframes typewriter{
 	from{width: 0;}
@@ -47,6 +45,18 @@
 	to{border-right-color: transparent;}
 }
 
+@keyframes stop {
+	from { border-right-color: transparent;}
+	to{border-right-color: transparent;}
+}
+
+.typeWriter h4 {
+	border-right: 2px solid transparent;
+	white-space: nowrap;
+	overflow: hidden;
+	max-width: 200px;
+	text-align: center;
+}
 
 /* _________ Bloc principal _________ */
 
@@ -54,38 +64,20 @@
 	background-color: #FFF;
 	border-radius: 4px;
 	padding: 10%;
-	height: 55%;
-	display: flex;
+	width: 60%;
+	margin: auto;	
 }
-
-.MenuDeep .BlockPrincipal {
-	margin: auto;
-}
-
 
 .blocPesentation p {
 	text-align: center;
 	margin: auto;
 }
 
-/* _________ Adaptation to bootsrap _________ */ 
-
-.Presentation .show-grid.row,
-.Presentation .col-xs-10,
-.BlockPrincipal {
-	height: 100%
-}
-
-.Presentation .row {
-	margin:0;
-}
 
 /* _________ adjustment for xs screen _________ */
 
 @media (max-width: 400px) {
-	.Presentation h4 {
-		font-size: 14px;
-	}
+
 }
 
 

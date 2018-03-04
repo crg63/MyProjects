@@ -1,11 +1,10 @@
 
 .Header {
-  height: 70px;
   transition: top .4s;
   position: fixed;
   width: 100%;
-  top: 0;
-  z-index: 1;
+  background-color: #fff;
+
 }
 
 /* Menu global */
@@ -18,20 +17,15 @@
 /* Menu de niveau 1 */
 .Header nav {
   position: relative;
-  z-index: 2;
-  background-color: #fff;
-  height: 100%;
 }
 
 .Header nav > ul {
   display: flex;
   justify-content: space-around;
-  padding: 0;
   align-items: center;
-  height: 100%;
 }
 
-/* Menu de niveau 2 */
+/*_______ Menu de niveau 2 _______*/
 
 .Header nav > ul > li {
   position: relative;
@@ -60,37 +54,13 @@
   transition-delay: 0s, 0s, 0.1s; 
   opacity: 1;
 }
+/*/////// ---------------- ///////*/
 
-.circle {
-  z-index: 1;
-  display: block;
-  width: 60px;
-  height: 60px;
-  border-radius: 60%;
-  background-color: #FFF;
-  position: absolute;
-  top: 35px;
-  transform: translate(-50%);
-  left: 50%;
-  cursor: pointer;
-}
-
-.circle img {
-  height: 60px;
-  width: 60px;
-}
-
-
-.MenuDeep header {
-  position: fixed;
-  top: -70px;
-  transition: top .4s;
-}
 
 /* ICI temporairement => { */
 
-@media (min-width: 769px) {
+/*@media (min-width: 769px) {
   * {
     background-color: red;
   }
-}
+}*/

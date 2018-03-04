@@ -28,11 +28,6 @@ import {ProjectsInfos} from './Project.jsx'
   </li>
 )
 
-const UpDownMenu = () => {
-      document.querySelector('.circle').addEventListener('click', () => {
-      document.querySelector('#root').classList.toggle('MenuDeep')      
-  })
-}
 
 const Header = () => (
     <header className="Header">
@@ -49,7 +44,6 @@ const Header = () => (
           <li>  </li> 
         </ul>
       </nav>
-        <span className="circle"  onClick={UpDownMenu} ><img src={require('../../img/digi.png')} alt="Open close menu" /> </span>
     </header>
 )
 
