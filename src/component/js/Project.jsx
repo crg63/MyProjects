@@ -6,32 +6,39 @@ import '../css/Projects.css'
 export const ProjectsInfos = [
 	{ 
 		id: 1,
-		name: "Plus pres de soi",
+		name: "pluspresdesoi.fr",
 		description: "Lorem ipsum du Lorem ipsum du Lorem ipsum Lorem ipsum." ,
 		img: require('../../img/ppds.png'),
 		link: "http://www.pluspresdesoi.fr"
-	},	
-	{ 
+	},
+	{
 		id: 2,
-		name: "Digital conseil",
+		name: "lokae.com",
 		description: "Lorem ipsum du Lorem ipsum du Lorem ipsum Lorem ipsum.",
 		img: require('../../img/ppds.png')
 	},	
 	{
 		id: 3,
-		name: "Internaxx",
+		name: "internaxx.com",
 		description: "Lorem ipsum du Lorem ipsum du Lorem ipsum Lorem ipsum.",
 		img: require('../../img/ppds.png')
 	}
 ]
 
-
-
-export const projects = ProjectsInfos.map( (project) =>
+export const projects = ProjectsInfos.map( (project) => 
 	<div className="Project" key={project.id}  id={project.name.split(' ').join('-')}>
-		<h3>{project.name}</h3>
-		<p>{project.description}</p>
-		<a href={project.link} target="_blank"> <img src={project.img} alt="Web site" /> </a>
+		<div>
+			<a href={project.link} target="_blank"> <img src={project.img} alt="Web site" /> </a>
+			<button type="submit" value="Send">+ Plus d'info </button>
+		</div>
+		<div>
+			<p>{project.name}</p>
+			<p>{project.description}</p>
+			<div>
+				<p> 12 </p>
+				<button type="submit" value="Send"> </button>
+			</div>
+		</div>
 	</div>
 )
 
@@ -39,7 +46,7 @@ export const projects = ProjectsInfos.map( (project) =>
 const Project = () => (
 	<div className="Projects" id="Projects">
 		<div className="BlockPrincipal">
-			<h2 className="banner">Projects</h2>
+			<h1 className="banner">Projects</h1>
 			{projects}
 		</div>
 		
