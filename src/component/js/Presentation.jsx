@@ -8,11 +8,11 @@ const Presentation = () => (
 
 		<h2>Presentation</h2>
 
-		<div className="typeWriter">
+		<div className="typeWriterTop">
 			<h4 className="animTypeWriter"> Cargouet Florian</h4> 
 		</div>
 
-		<div className="typeWriter">
+		<div className="typeWriterBot">
 			<h4 className="animTypeWriter2">Web Developpeur</h4> 
 		</div>
 

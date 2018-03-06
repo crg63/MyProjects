@@ -10,7 +10,8 @@
 /* _________ Animation type writer _________ */
 
 
-.Presentation .typeWriter {
+.typeWriterTop, 
+.typeWriterBot {
 	background: rgba(96, 106, 164, .7);
 	width: 100%;
 	max-width: 305px;
@@ -19,6 +20,14 @@
 	text-align: center;
 	color: #000;
 	vertical-align: center;
+}
+
+.typeWriterTop{
+	border-radius: 4px 4px 0 0;
+}
+
+.typeWriterBot {
+	border-radius: 0 0 4px 4px;
 }
 
 .animTypeWriter {
@@ -31,7 +40,6 @@
 .animTypeWriter2 {
 	animation: typewriter 4s steps(32) 5s 1 normal both,
 	blinkTextCursor 600ms steps(32) 5s infinite normal;
-
 }
 
 
@@ -50,7 +58,7 @@
 	to{border-right-color: transparent;}
 }
 
-.typeWriter h4 {
+h4 {
 	border-right: 2px solid transparent;
 	white-space: nowrap;
 	overflow: hidden;

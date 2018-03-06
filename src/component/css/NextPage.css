@@ -12,9 +12,7 @@
 
 
 .Presentation .NextPage {
-
-	left: 45%;
-	bottom: 3%;
+	margin: auto;
 }
 
 .NextPage {
@@ -26,10 +24,8 @@
 }
 
 .NextPage a {
-	text-align: center;
 	font-family: 'Comfortaa', cursive;
     font-size: 2em;
-    height: 100%;
     width: 100%;
 }
 
