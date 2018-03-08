@@ -29,14 +29,16 @@ export const projects = ProjectsInfos.map( (project) =>
 	<div className="Project" key={project.id}  id={project.name.split(' ').join('-')}>
 		<div>
 			<a href={project.link} target="_blank"> <img src={project.img} alt="Web site" /> </a>
-			<button type="submit" value="Send">+ Plus d'info </button>
+			<button type="submit" value="Send" className="btnInfo">+ Plus d'info </button>
 		</div>
 		<div>
-			<p>{project.name}</p>
-			<p>{project.description}</p>
 			<div>
-				<p> 12 </p>
-				<button type="submit" value="Send"> </button>
+				<p>{project.name}</p>
+				<p>{project.description}</p>
+				<div>
+					<p> 12 </p>
+					<button type="submit" value="Send" className="btnClap"> <img src="/static/media/y.25044dd1.png" /> </button>
+				</div>
 			</div>
 		</div>
 	</div>

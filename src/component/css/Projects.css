@@ -19,17 +19,26 @@
 	margin-bottom: 20px;
 	background-color: #fff;
 	padding: 10px;
+	display: flex;
+	flex-direction: column;
 }
 
 .Project > div {
 	width: 100%;
+	display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.Project div div {
+.Project > div > div {
 	text-align: right;
+	display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: space-between;
 }
 
-.Project div div > * {
+.Project div div > div * {
 	display: inline-block;
 	background-color: #606aa4;
 }
@@ -39,25 +48,58 @@
 	height: 50px;
 	border-radius: 50%;
 	border: 0;
-	background-image:url("../../img/y.png");
-	background-size: contain;
 }
 
-.Project div div p {
+.Project div:nth-child(n+2)  button  img {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+}
+
+
+.Project div > div > p {
+	text-align: left;
+}
+
+.Project div div div p {
 	border-radius: 5px;
-	margin-right: 10px;
+	margin: 0 1rem 1rem 0;
     color: #fff;
     width: 25px;
     height: 25px;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: bottom;
 }
 
+.btnInfo {
+	background-color: #606aa4;
+	border: none;
+	border-radius: 5px;
+	color: #fff;
+	padding: 5px;
+}
+
+@keyframes example {
+	0% 		{opacity: 0}
+	50% 	{opacity: 0.5}
+	100%	{opacity: 1}
+}
+.btnClap:hover {
+	animation-name: example;
+	animation-duration: 4s;
+}
+
+
+
 @media (min-width: 600px) {
+	.Project {
+		flex-direction: row;
+	}
 	.Project > div {
 		display: inline-block;
+		flex-direction: column;
 		width: 50%;
-		vertical-align: top;
+		vertical-align: bottom;
 	}
 }
 
