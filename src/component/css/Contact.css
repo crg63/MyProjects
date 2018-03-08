@@ -1,11 +1,11 @@
 .Contact {
 	background-image:url("../../img/phone.png");
     width: 100%;
-    height: calc(100vh);
+    height: calc(100vh - 59px);
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    background-position: 50% 50%;
+    background-position: 50% 20%;
 }
 
 .contactForm {

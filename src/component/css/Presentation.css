@@ -2,20 +2,40 @@
 	background-image:url(https://images.pexels.com/photos/196658/pexels-photo-196658.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
 	background-position-x: 10%;
 	width: 100%;
-	height:  calc(100vh);
-	    background-position: center;
+    height: calc(100vh - 59px);
+	background-position: center;
 	background-repeat: no-repeat;
 }
 
+/* _________ Bloc principal _________ */
+
+.blocPesentation {
+	background-color: #FFF;
+	border-radius: 4px;
+	padding: 5%;
+	width: 65%;
+	margin: 50px auto;
+}
+
+
+.blocPesentation p {
+	text-align: justify;
+	margin: auto;
+}
+
+
 /* _________ Animation type writer _________ */
 
-
-.typeWriterTop, 
-.typeWriterBot {
+.typeWriterBg {
 	background: rgba(96, 106, 164, .7);
 	width: 100%;
 	max-width: 305px;
 	margin: auto;
+	border-radius: 4px;
+	margin: 20px auto;
+}
+
+.Presentation .typeWriter {
 	padding-left: 55px;
 	text-align: center;
 	color: #000;
@@ -65,22 +85,6 @@ h4 {
 	max-width: 200px;
 	text-align: center;
 }
-
-/* _________ Bloc principal _________ */
-
-.blocPesentation {
-	background-color: #FFF;
-	border-radius: 4px;
-	padding: 10%;
-	width: 60%;
-	margin: auto;	
-}
-
-.blocPesentation p {
-	text-align: center;
-	margin: auto;
-}
-
 
 /* _________ adjustment for xs screen _________ */
 

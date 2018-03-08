@@ -12,7 +12,7 @@ class Contact extends React.Component {
 			<div className="Contact">
 
 				<div className="BlockPrincipal">
-					<h2> Contact</h2>
+					<h1> Contact</h1>
 
 					<form className="contactForm" action="https://formspree.io/floriancargouet@gmail.com" method="POST"> 
 

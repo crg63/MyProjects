@@ -6,20 +6,32 @@ import '../css/NextPage.css'
 const Presentation = () => (
 	<div className="Presentation" >
 
-		<h2>Presentation</h2>
+		<h1>Presentation</h1>
 
-		<div className="typeWriterTop">
-			<h4 className="animTypeWriter"> Cargouet Florian</h4> 
-		</div>
 
-		<div className="typeWriterBot">
-			<h4 className="animTypeWriter2">Web Developpeur</h4> 
+		<div className="typeWriterBg">
+			<div className="typeWriter">
+				<h4 className="animTypeWriter"> Cargouet Florian</h4> 
+			</div>
+			<div className="typeWriter">
+				<h4 className="animTypeWriter2">Web Developpeur</h4> 
+			</div>
 		</div>
 
 		<div className="blocPesentation">
-			<p>Welcome to my world, I present myself, I am Cargouet Florian, a junior developer JavaScript. Lorem ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum
-			ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum ipsum
-			ipsum ipsum ipsum ipsu
+			<p>Bonjour,  bienvenu sur mon
+				site web. Je suis jeune
+				 développeur web qui vous
+				 propose un tas de struc lorem 
+				ipsum dalgo dis la ronaise de 
+				salami les chausson sec archi sec
+				<br/><br/>
+				Bonjour,  bienvenu sur mon
+				site web. Je suis jeune
+				 développeur web qui vous
+				 propose un tas de struc lorem 
+				ipsum dalgo dis la ronaise de 
+				salami les chausson sec archi sec.
 			</p>
 		</div>
 

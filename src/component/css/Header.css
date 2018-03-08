@@ -1,10 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Karma|Lilita+One');
 
 .Header {
   transition: top .4s;
-  position: fixed;
   width: 100%;
   background-color: #fff;
-
+  border-bottom: 1px solid;
 }
 
 /* Menu global */
@@ -12,6 +12,7 @@
 .Header a {
   font-size: 1.6em;
   color: #000;
+  margin: auto;
 }
 
 /* Menu de niveau 1 */
@@ -23,32 +24,54 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 0;
+  padding: 10px 0;
+}
+
+
+.Header nav > ul > li:nth-child(2):after {
+  content: ">";
+  font-size: 30px;
+  transform: rotate(270deg);
+  font-family: 'Lilita One', cursive;
+  color: #606aa4;
+  position: absolute;
+  right: -20px;
+  transition: transform .5s;
+}
+
+.Header nav > ul > li {
+  display: flex;
+  position: relative;
+}
+
+.Header nav > ul > li:nth-child(2):hover:after {
+  transform: rotate(90deg);
+  transition: transform .5s;
 }
 
 /*_______ Menu de niveau 2 _______*/
 
-.Header nav > ul > li {
-  position: relative;
-}
-
-.Header ul ul {
+.level2 {
   opacity: 0;
   visibility: hidden;
   padding-left: 0px;
   position: absolute;
-  top:30px;
-  left: -20px;
+  top: 48px;
+  left: -50px;
   background-color: #fff;
   border-bottom: 1px solid #222;
   border-left: 1px solid #222;
   border-right: 1px solid #222;
-  border-radius: 0 4px 4px;
+  border-radius: 0 0 4px 4px;
   box-shadow: 5px 5px 5px #888888;
   transition: all 0.5s ease-in-out 0s, visibility 0s, linear 0.3s, opacity 0.4s;
-  text-align: center; 
+  text-align: center;
+  z-index: 1;
+  width: 200px;
 }
 
-.Header ul li:hover ul {
+.Header ul li:hover .level2 {
   visibility: visible;
   transform: translateY(0);
   transition-delay: 0s, 0s, 0.1s; 

@@ -6,31 +6,58 @@
 	background-size: cover;
 }
 
-
-.Projects img{
-	height: 200px;
+.Projects img {
+	width: 100%;
 }
 
 .Project {
 	background: #222;
 	border-radius: 5px;
-	color: #FFF;
-	padding: 20px;
+	color: #000;
 	width: 80%;
 	margin: auto;
 	margin-bottom: 20px;
+	background-color: #fff;
+	padding: 10px;
 }
 
+.Project > div {
+	width: 100%;
+}
 
+.Project div div {
+	text-align: right;
+}
 
-/*h2 {
-	position: relative;
-	top: 0;
-	transition: top .4s,
-	}*/
-/*
-.MenuDeep h2 {
-position: relative;
-top: -50px;
-transition: top .4s;	
-}*/
+.Project div div > * {
+	display: inline-block;
+	background-color: #606aa4;
+}
+
+.Project div:nth-child(n+2)  button {
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: 0;
+	background-image:url("../../img/y.png");
+	background-size: contain;
+}
+
+.Project div div p {
+	border-radius: 5px;
+	margin-right: 10px;
+    color: #fff;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+@media (min-width: 600px) {
+	.Project > div {
+		display: inline-block;
+		width: 50%;
+		vertical-align: top;
+	}
+}
+

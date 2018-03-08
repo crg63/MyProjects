@@ -36,12 +36,11 @@ const Header = () => (
           <li><Link to='/Presentation'>Presentation</Link></li>
           <li>
             <Link to='/Projects'>Projects</Link> 
-            <ul>
+            <ul className="level2">
             {projects}
             </ul>
           </li>
           <li><Link to='/Contact'>Contact</Link></li>
-          <li>  </li> 
         </ul>
       </nav>
     </header>
