@@ -1,7 +1,7 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import Presentation from '../component/js/Presentation.jsx'
-import Project from '../component/js/Project.jsx'
+import Projects from '../component/js/Project.jsx'
 import Contact from '../component/js/Contact.jsx'
 import Header from '../component/js/Header.jsx'
 // import ReactGoogleAuth from '../component/js/google.jsx'
@@ -18,7 +18,7 @@ const Main = () => (
     <Switch>
       <Route exact path='/' component={Presentation}/>
   		<Route path='/Presentation' component={Presentation}/>
-  		<Route path='/Projects' component={Project}/>
+  		<Route path='/Projects' component={Projects}/>
   		<Route path='/Contact' component={Contact}/>
     </Switch>
   </main>
