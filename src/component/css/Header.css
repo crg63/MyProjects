@@ -25,7 +25,6 @@
   justify-content: space-around;
   align-items: center;
   margin-bottom: 0;
-  padding: 10px 0;
 }
 
 
@@ -43,6 +42,7 @@
 .Header nav > ul > li {
   display: flex;
   position: relative;
+  padding: 10px 0;
 }
 
 .Header nav > ul > li:nth-child(2):hover:after {
@@ -57,7 +57,7 @@
   visibility: hidden;
   padding-left: 0px;
   position: absolute;
-  top: 48px;
+  top: 58px;
   left: -50px;
   background-color: #fff;
   border-bottom: 1px solid #222;
