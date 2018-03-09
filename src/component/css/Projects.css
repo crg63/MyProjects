@@ -51,8 +51,6 @@
 }
 
 .Project div:nth-child(n+2)  button  img {
-	width: 40px;
-	height: 40px;
 	border-radius: 50%;
 }
 
@@ -79,14 +77,21 @@
 	padding: 5px;
 }
 
-@keyframes example {
-	0% 		{opacity: 0}
-	50% 	{opacity: 0.5}
-	100%	{opacity: 1}
+@keyframes low {
+	0% 		{   ;}
+	25% 	{   ;}
+	40%		{   ;}
+
+	60%		{   ;}
+	75% 	{   ;}
+	100% 	{   ;}
 }
+
 .btnClap:hover {
-	animation-name: example;
-	animation-duration: 4s;
+	animation-name: low;
+	animation-duration: 1s;
+	animation-iteration-count: 10;
+
 }
 
 

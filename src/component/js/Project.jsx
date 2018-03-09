@@ -25,6 +25,7 @@ export const ProjectsInfos = [
 	}
 ]
 
+
 export const projects = ProjectsInfos.map( (project) => 
 	<div className="Project" key={project.id}  id={project.name.split(' ').join('-')}>
 		<div>
@@ -37,7 +38,7 @@ export const projects = ProjectsInfos.map( (project) =>
 				<p>{project.description}</p>
 				<div>
 					<p> 12 </p>
-					<button type="submit" value="Send" className="btnClap"> <img src="/static/media/y.25044dd1.png" /> </button>
+					<button type="submit" value="Send" className="btnClap"> <img src={require("../../img/y.png")} /> </button>
 				</div>
 			</div>
 		</div>
