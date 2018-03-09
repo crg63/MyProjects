@@ -12,7 +12,7 @@
 .Header a {
   font-size: 1.6em;
   color: #000;
-  margin: auto;
+  text-align: center;
 }
 
 /* Menu de niveau 1 */
@@ -24,9 +24,10 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
+  flex-direction: column;
   margin-bottom: 0;
+  padding: 0;
 }
-
 
 .Header nav > ul > li:nth-child(2):after {
   content: ">";
@@ -35,7 +36,7 @@
   font-family: 'Lilita One', cursive;
   color: #606aa4;
   position: absolute;
-  right: -20px;
+  right: 20px;
   transition: transform .5s;
 }
 
@@ -43,6 +44,7 @@
   display: flex;
   position: relative;
   padding: 10px 0;
+  flex-direction: column;
 }
 
 .Header nav > ul > li:nth-child(2):hover:after {
@@ -53,30 +55,18 @@
 /*_______ Menu de niveau 2 _______*/
 
 .level2 {
-  opacity: 0;
-  visibility: hidden;
   padding-left: 0px;
-  position: absolute;
-  top: 58px;
-  left: -50px;
+  flex-direction: column;
+  height: 0;
   background-color: #fff;
-  border-bottom: 1px solid #222;
-  border-left: 1px solid #222;
-  border-right: 1px solid #222;
-  border-radius: 0 0 4px 4px;
-  box-shadow: 5px 5px 5px #888888;
-  transition: all 0.5s ease-in-out 0s, visibility 0s, linear 0.3s, opacity 0.4s;
   text-align: center;
-  z-index: 1;
   width: 200px;
 }
 
-.Header ul li:hover .level2 {
-  visibility: visible;
-  transform: translateY(0);
-  transition-delay: 0s, 0s, 0.1s; 
-  opacity: 1;
+.level2 a {
+  font-size: 0;
 }
+
 /*/////// ---------------- ///////*/
 
 
@@ -87,3 +77,44 @@
     background-color: red;
   }
 }*/
+
+@media (min-width: 500px) {
+  .Header nav > ul {
+    flex-direction: row;
+  }
+
+  .Header ul li:hover .level2 {
+    visibility: visible;
+    transform: translateY(0);
+    transition-delay: 0s, 0s, 0.1s; 
+    opacity: 1;
+  }
+
+  .Header nav > ul > li {
+    flex-direction: row;
+  }
+
+  .Header nav > ul > li:nth-child(2):after {
+    right: -20px;
+  }
+
+  .level2 {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 58px;
+    left: -50px;
+    box-shadow: 5px 5px 5px #888888;
+    transition: all 0.5s ease-in-out 0s, visibility 0s, linear 0.3s, opacity 0.4s;
+    border-bottom: 1px solid #222;
+    border-left: 1px solid #222;
+    border-right: 1px solid #222;
+    border-radius: 0 0 4px 4px;
+    z-index: 1;
+    height: initial;
+  }
+
+  .level2 a {
+    font-size: 1.6em;
+  }
+}
