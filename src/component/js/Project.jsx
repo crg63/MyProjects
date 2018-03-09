@@ -30,7 +30,7 @@ export const projects = ProjectsInfos.map( (project) =>
 	<div className="Project" key={project.id}  id={project.name.split(' ').join('-')}>
 		<div>
 			<a href={project.link} target="_blank"> <img src={project.img} alt="Web site" /> </a>
-			<button type="submit" value="Send" className="btnInfo">+ Plus d'info </button>
+			<button type="submit" value="Send" className="btnInfo" >+ Plus d'info </button>
 		</div>
 		<div>
 			<div>
@@ -45,8 +45,7 @@ export const projects = ProjectsInfos.map( (project) =>
 	</div>
 )
 
-
-const Project = () => (
+const Projects = () => (
 	<div className="Projects" id="Projects">
 		<div className="BlockPrincipal">
 			<h1 className="banner">Projects</h1>
@@ -67,5 +66,5 @@ const Project = () => (
 
 // console.log(projects)
 
-export default Project
+export default Projects
 

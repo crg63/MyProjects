@@ -38,7 +38,7 @@
     justify-content: space-between;
 }
 
-.Project div div > div * {
+.Project div div > div > * {
 	display: inline-block;
 	background-color: #606aa4;
 }
@@ -78,13 +78,11 @@
 }
 
 @keyframes low {
-	0% 		{   ;}
-	25% 	{   ;}
-	40%		{   ;}
-
-	60%		{   ;}
-	75% 	{   ;}
-	100% 	{   ;}
+	20% 	{ box-shadow: 0 0 0 1px rgba(96,106,164,0.5);}
+	40%		{ box-shadow: 0 0 0 2px rgba(96,106,164,0.4);}
+	60%		{ box-shadow: 0 0 0 3px rgba(96,106,164,0.3);}
+	80%		{ box-shadow: 0 0 0 4px rgba(96,106,164,0.2);}
+	100% 	{ box-shadow: 0 0 0 5px rgba(96,106,164,0.1);}
 }
 
 .btnClap:hover {
@@ -93,8 +91,6 @@
 	animation-iteration-count: 10;
 
 }
-
-
 
 @media (min-width: 600px) {
 	.Project {
