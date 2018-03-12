@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../css/Header.css'
-import {ProjectsInfos} from './Project.jsx'
+import {ProjectsInfos} from './Projects.jsx'
 
 
 
