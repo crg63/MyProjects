@@ -1,16 +1,16 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {projects} from './Projects.jsx'
+import {Projects} from './Projects.jsx'
 import '../css/Projects.css'
 
-class Projects extends React.Component {
+class ProjectsWrap extends React.Component {
 
 	render() {
 		return (
 			<div className="Projects" id="Projects">
 				<div className="BlockPrincipal">
 					<h1 className="banner">Projects</h1>
-					{projects}
+					{Projects}
 				</div>
 				
 				<div className="NextPageBlock">
@@ -29,5 +29,5 @@ class Projects extends React.Component {
 
 // console.log(projects)
 
-export default Projects
+export default ProjectsWrap
 

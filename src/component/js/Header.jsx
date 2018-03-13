@@ -22,7 +22,7 @@ import {ProjectsInfos} from './Projects.jsx'
 
 // test()
 
- const projects = ProjectsInfos.map( (project) =>
+ const projectsList = ProjectsInfos.map( (project) =>
   <li key={project.id}>
     <Link to={'/Projects#' + project.name.split(' ').join('-')} >{project.name}</Link> 
   </li>
@@ -37,7 +37,7 @@ const Header = () => (
           <li>
             <Link to='/Projects'>Projects</Link> 
             <ul className="level2">
-            {projects}
+            {projectsList}
             </ul>
           </li>
           <li><Link to='/Contact'>Contact</Link></li>
