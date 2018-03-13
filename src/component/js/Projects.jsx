@@ -62,7 +62,7 @@ export const Projects = ProjectsInfos.map( (project) =>
 				<div>
 					{/*	<BtnClap onClick={this.MoreApplose} />*/}
 					<p> 12 </p>
-					<button type="submit" value="Send" className="btnInfo" ><img src={require("../../img/y.png")} /> </button>
+					<button type="submit" value="Send" className="btnClap" ><img src={require("../../img/y.png")} /> </button>
 				</div>
 			</div>
 		</div>
