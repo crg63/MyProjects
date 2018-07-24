@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Karma|Lilita+One');
 
+html,
+body,
+#root,
+#root > div,
+main,
+.Presentation {
+	height: 101%;
+}
+
 body {
 	margin: 0;
 	padding: 0;
@@ -43,6 +52,7 @@ h1 {
 }
 
 .Projects h1,
-.Presentation h1 {
+.Presentation h1,
+.Contact h1 {
 	color: #FFF;
 }

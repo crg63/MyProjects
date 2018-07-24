@@ -44,8 +44,8 @@
 }
 
 .Project div:nth-child(n+2)  button {
-	width: 50px;
-	height: 50px;
+	width: 60px;
+	height: 60px;
 	border-radius: 50%;
 	border: 0;
 }
@@ -54,9 +54,14 @@
 	border-radius: 50%;
 }
 
+.Project div > div > p:first-child {
+	text-align: center;
+	padding: 0;
+}
 
 .Project div > div > p {
 	text-align: left;
+	padding-left: 50px;
 }
 
 .Project div div div p {
@@ -75,6 +80,7 @@
 	border-radius: 5px;
 	color: #fff;
 	padding: 5px;
+	cursor: pointer;
 }
 
 @keyframes low {
@@ -85,7 +91,7 @@
 	100% 	{ box-shadow: 0 0 0 5px rgba(96,106,164,0.1);}
 }
 
-.btnClap:hover {
+.btnClap button:hover {
 	animation-name: low;
 	animation-duration: 1s;
 	animation-iteration-count: 10;

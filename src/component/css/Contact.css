@@ -1,24 +1,138 @@
 .Contact {
-	background-image:url("../../img/phone.png");
-    width: 100%;
-    height: calc(100vh - 59px);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: 50% 35%;
-    background-size: 500%;
+	background-image:url("../../img/timesSquare.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	width: 100%;
+	height: calc(100% - 70px);
+	position: relative;
+	z-index: 0;
+}
+
+.Contact:after {
+	content: " ";
+	position: absolute;
+	top: 0;
+	width: 100% ;
+	height: 100%;
+	background: rgba(96, 106, 164, .6);
+	z-index: 0;
+}
+
+.Contact .BlockPrincipal {
+	position: relative;
+	z-index: 1;
+}
+
+.Contact img {
+	display: none;
 }
 
 .contactForm {
 	border-radius: 3px;
-	padding: 10px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 .contactForm div {
 	display: flex;
-	padding: 5%;
+	flex-direction: column;
+	padding: 2%;
+	margin: 1%;
+	font-weight: bold;
+	color: #fff;
 }
 
+.contactForm > div:first-child {
+	width: 90%;
+}
 
 .Contact label {
 	white-space: nowrap;
+}
+
+.Contact .NextPage {
+	justify-content: center;
+
+}
+
+@media (min-width: 768px) { 
+	
+	.Contact {
+		height: 100%;
+	}
+
+	.Contact:after {
+		display: none;
+	}
+
+	.Contact .BlockPrincipal {
+		position: static;
+	}
+
+	.Contact img {
+		display: initial;
+		width: 600px;
+		position: absolute;
+		left: 216px;
+		right: 0;
+		margin: auto;
+		bottom: 0;
+	}
+
+	.contactForm {
+		position: absolute;
+	    bottom: 150px;
+	    left: 0;
+	    right: 0;
+	    padding: 10px;
+	}
+
+	.contactForm div {
+		margin: 0;
+		padding: 12px;
+		margin-top: -5px;
+	}
+
+	.contactForm > div:first-child {
+		width: initial;
+	}
+
+	.Contact input,
+	.submit button ,
+	textarea {
+		background: #606aa4;
+		border: none;
+		padding: 5px;
+		color: #fff;
+		border-radius: 5px;
+	}
+
+	.submit {
+		align-items: center;
+	}
+
+	.submit button {
+		cursor: pointer;
+		width: 100px;
+	}
+
+	.Contact input::placeholder,
+	.Contact textarea::placeholder {
+		color: #fff;
+	}
+
+
+	.Contact .NextPage {
+		top:10px;
+	}
+
+	.Contact .NextPage a {
+		left: 0;
+		top:0;
+		right: 0;
+		bottom: 0;
+		position: absolute;
+		margin: auto;
+	}
 }

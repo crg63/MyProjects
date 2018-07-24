@@ -1,52 +1,72 @@
 import React from 'react'
 
+var applose = 0
 export const ProjectsInfos = [
 	{ 
 		id: 1,
 		name: "pluspresdesoi.fr",
+		avec: "Réaliser avec: Lorem ipsum",
+		pour: "Réaliser pour: Lorem ipsum",
 		description: "Lorem ipsum du Lorem ipsum du Lorem ipsum Lorem ipsum." ,
 		img: require('../../img/ppds.png'),
-		link: "http://www.pluspresdesoi.fr"
+		link: "http://www.pluspresdesoi.fr",
+		apploseNb: applose
 	},
 	{
 		id: 2,
 		name: "lokae.com",
+		avec: "Réaliser avec: Lorem ipsum",
+		pour: "Réaliser pour: Lorem ipsum",
 		description: "Lorem ipsum du Lorem ipsum du Lorem ipsum Lorem ipsum.",
-		img: require('../../img/ppds.png')
+		img: require('../../img/ppds.png'),
+		link: "http://www.pluspresdesoi.fr",
+		apploseNb: applose
 	},	
 	{
 		id: 3,
 		name: "internaxx.com",
+		avec: "Réaliser avec: Lorem ipsum",
+		pour: "Réaliser pour: Lorem ipsum",
 		description: "Lorem ipsum du Lorem ipsum du Lorem ipsum Lorem ipsum.",
-		img: require('../../img/ppds.png')
+		img: require('../../img/ppds.png'),
+		link: "http://www.pluspresdesoi.fr",
+		apploseNb: applose
 	}
 ]
 
-/*class BtnClap extends React.Component {
+
+class BtnClap extends React.Component {
 	constructor(props) {
-		super(props)
-		this.state = {applose: 0}
-		this.MoreApplose = this.MoreApplose.bind(this);
+			super(props)
+			this.state = {applose}
+			this.MoreApplose = this.MoreApplose.bind(this);
+		}
+
+		componentDidMount() {
 
 		}
 
 		MoreApplose() {
-			const newApplose = this.state.applose += 1
-			newApplose.toString()
+			var newApplose = this.state.applose + 1
 			this.setState({applose: newApplose})
+			console.log(this.state.applose)
+
+			console.log(ProjectsInfos[0].apploseNb)
 		}
+
+
 
 		render() {
 		return (
-		  <div>
-		  	<p> {this.applose} </p>
+		  <div className="btnClap">
+		  	<p> {this.state.applose} </p>
 		    <button onClick={this.MoreApplose}>
 				<img src={require("../../img/y.png")} /> 
 			</button>
 		  </div>
 		);
 	}
-}*/
+}
 
 
 export const Projects = ProjectsInfos.map( (project) => 
@@ -58,12 +78,9 @@ export const Projects = ProjectsInfos.map( (project) =>
 		<div>
 			<div>
 				<p>{project.name}</p>
-				<p>{project.description}</p>
-				<div>
-					{/*	<BtnClap onClick={this.MoreApplose} />*/}
-					<p> 12 </p>
-					<button type="submit" value="Send" className="btnClap" ><img src={require("../../img/y.png")} /> </button>
-				</div>
+				<p>{project.avec} <br/><br/> {project.pour}</p>
+				<p>{}</p>
+				<BtnClap onClick={this.MoreApplose} />	
 			</div>
 		</div>
 	</div>
