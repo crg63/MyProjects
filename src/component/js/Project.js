@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {Projects} from './Projects.jsx'
+import {Projects} from './Projects.js'
 import '../css/Projects.css'
 
 class ProjectsWrap extends React.Component {

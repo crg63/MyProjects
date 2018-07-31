@@ -43,7 +43,7 @@ class BtnClap extends React.Component {
 		}
 
 		componentDidMount() {
-
+			console.log(JSON.stringify(ProjectsInfos));
 		}
 
 		MoreApplose() {
