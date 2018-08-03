@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../css/Header.css'
-import {ProjectsInfos} from './Projects.js'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
@@ -33,11 +32,11 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 })
 
-const projectsList = ProjectsInfos.map( (project) =>
-	<li key={project.id}>
-	<Link to={'/Projects#' + project.name.split(' ').join('-')} >{project.name}</Link> 
-	</li>
-	)
+// const projectsList = ProjectsInfos.map( (project) =>
+// 	<li key={project.id}>
+// 	<Link to={'/Projects#' + project.name.split(' ').join('-')} >{project.name}</Link> 
+// 	</li>
+// 	)
 
 
 class Header extends React.Component {
@@ -55,7 +54,7 @@ class Header extends React.Component {
 						<li className="elmParentLevel2">
 							<Link to='/Projects'>Projects</Link> 
 							<ul className="level2">
-								{projectsList}
+								
 							</ul>
 						</li>
 						<li>

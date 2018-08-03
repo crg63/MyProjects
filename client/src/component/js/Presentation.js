@@ -4,18 +4,19 @@ import '../css/Presentation.css'
 import '../css/NextPage.css'
 
 class Presentation extends React.Component {
-		 // state = {
-		 //    response: ''
-		 //  };
+		 state = {
+		    response: ''
+		  };
 
 	componentDidMount() {
 		 // this.callApi()
 	      // .then(res => this.setState({ response: res.express }))
 	      // .catch(err => console.log(err));
-  				fetch("/api/hello")
+  				fetch("/data/projects")
 				.then(res=>res.json())
 				.then((data)=> {
-					console.log(data.express);
+					console.log(data);
+					this.setState({response: data.express})
 				})
 	}
 
@@ -32,7 +33,7 @@ class Presentation extends React.Component {
 		return (
 			<div className="Presentation" >
 
-			<h1>Presentation</h1>
+			<h1></h1>
 
 			{
 				// Mettre une image de ma tête

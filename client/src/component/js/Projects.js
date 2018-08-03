@@ -1,39 +1,6 @@
 import React from 'react'
 
 var applose = 0
-export const ProjectsInfos = [
-	{ 
-		id: 1,
-		name: "pluspresdesoi.fr",
-		avec: "Réaliser avec: Lorem ipsum",
-		pour: "Réaliser pour: Lorem ipsum",
-		description: "Lorem ipsum du Lorem ipsum du Lorem ipsum Lorem ipsum." ,
-		img: require('../../img/ppds.png'),
-		link: "http://www.pluspresdesoi.fr",
-		apploseNb: applose
-	},
-	{
-		id: 2,
-		name: "lokae.com",
-		avec: "Réaliser avec: Lorem ipsum",
-		pour: "Réaliser pour: Lorem ipsum",
-		description: "Lorem ipsum du Lorem ipsum du Lorem ipsum Lorem ipsum.",
-		img: require('../../img/ppds.png'),
-		link: "http://www.pluspresdesoi.fr",
-		apploseNb: applose
-	},	
-	{
-		id: 3,
-		name: "internaxx.com",
-		avec: "Réaliser avec: Lorem ipsum",
-		pour: "Réaliser pour: Lorem ipsum",
-		description: "Lorem ipsum du Lorem ipsum du Lorem ipsum Lorem ipsum.",
-		img: require('../../img/ppds.png'),
-		link: "http://www.pluspresdesoi.fr",
-		apploseNb: applose
-	}
-]
-
 
 class BtnClap extends React.Component {
 	constructor(props) {
@@ -42,9 +9,6 @@ class BtnClap extends React.Component {
 			this.MoreApplose = this.MoreApplose.bind(this);
 		}
 
-		componentDidMount() {
-			// console.log(JSON.stringify(ProjectsInfos));
-		}
 
 		MoreApplose() {
 			var newApplose = this.state.applose + 1
@@ -67,20 +31,55 @@ class BtnClap extends React.Component {
 	}
 }
 
+			
 
-export const Projects = ProjectsInfos.map( (project) => 
-	<div className="Project" key={project.id}  id={project.name.split(' ').join('-')}>
-		<div>
-			<a href={project.link} target="_blank"> <img src={project.img} alt="Web site" /> </a>
-			<button type="submit" value="Send" className="btnInfo" >+ Plus d'info </button>
-		</div>
-		<div>
-			<div>
-				<p>{project.name}</p>
-				<p>{project.avec} <br/><br/> {project.pour}</p>
-				<p>{}</p>
-				<BtnClap onClick={this.MoreApplose} />	
+class Projects extends React.Component {
+		 state = {
+		    response: ''
+		  };
+
+	componentDidMount() {
+		 // this.callApi()
+	      // .then(res => this.setState({ response: res.express }))
+	      // .catch(err => console.log(err));
+  				fetch("/data/projects")
+				.then(res=>res.json())
+				.then((data)=> {
+					console.log(data);
+					this.setState({response: data.express})
+				})
+	}
+
+	// callApi = async () => {
+ //    const response = await fetch('/api/hello');
+ //    const body = await response.json();
+
+ //    if (response.status !== 200) throw Error(body.message);
+
+ //    	return body;
+ //  	}
+
+
+
+	render() {
+		return (
+
+			<div className="Project" key={"5"}  id={"5"}>
+				<div>
+					<a href={"5"} target="_blank"> <img src={"5"} alt="Web site" /> </a>
+					<button type="submit" value="Send" className="btnInfo" >+ Plus d'info </button>
+				</div>
+				<div>
+					<div>
+						<p>{"desd"}</p>
+						<p>{} <br/><br/> {'ur'}</p>
+						<p>{}</p>
+						<BtnClap onClick={this.MoreApplose} />	
+					</div>
+				</div>
 			</div>
-		</div>
-	</div>
-)
+		)
+	}
+}
+
+export default Projects

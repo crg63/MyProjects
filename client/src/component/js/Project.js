@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import {Projects} from './Projects.js'
+import Projects from './Projects.js'
 import '../css/Projects.css'
 
 class ProjectsWrap extends React.Component {
@@ -10,7 +10,7 @@ class ProjectsWrap extends React.Component {
 			<div className="Projects" id="Projects">
 				<div className="BlockPrincipal">
 					<h1 className="banner">Projects</h1>
-					{Projects}
+					<Projects />
 				</div>
 				
 				<div className="NextPageBlock">
