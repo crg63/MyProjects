@@ -1,5 +1,6 @@
 const express = require('express');
 const fs = require('fs');
+// const MongoClient = require('mongodb').MongoClient;
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -13,3 +14,17 @@ app.get('/data/projects', (req, res) => {
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
+
+
+
+// MongoClient.connect('mongodb://localhost:27017/animals', function(err, db) {
+//   if (err) {
+//     throw err;
+//   }
+//   db.collection('mammals').find().toArray(function(err, result) {
+//     if (err) {
+//       throw err;
+//     }
+//     console.log(result);
+//   });
+// });
