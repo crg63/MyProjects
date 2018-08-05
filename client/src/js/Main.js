@@ -1,9 +1,9 @@
 import React, { Component } from 'react'
 import { Switch, Route } from 'react-router-dom'
-import Presentation from '../component/js/Presentation.js'
-import ProjectsWrap from '../component/js/Project.js'
-import Contact from '../component/js/Contact.js'
-import Header from '../component/js/Header.js'
+import Presentation from '../component/js/Presentation'
+import ProjectsWrap from '../component/js/Projects'
+import Contact from '../component/js/Contact'
+import Header from '../component/js/Header'
 // import ReactGoogleAuth from '../component/js/google.js'
 
 
