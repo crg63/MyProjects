@@ -1,85 +1,56 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
+import Project from './Project.js'
+import '../css/Projects.css'
 
-var applose = 0
-
-class BtnClap extends React.Component {
+class ProjectsWrap extends React.Component {
 	constructor(props) {
-			super(props)
-			this.state = {applose}
-			this.MoreApplose = this.MoreApplose.bind(this);
-		}
+		super(props);
 
-
-		MoreApplose() {
-			var newApplose = this.state.applose + 1
-			this.setState({applose: newApplose})
-			// console.log(this.state.applose)
-			// console.log(ProjectsInfos[0].apploseNb)
-		}
-
-
-
-		render() {
-		return (
-		  <div className="btnClap">
-		  	<p> {this.state.applose} </p>
-		    <button onClick={this.MoreApplose}>
-				<img src={require("../../img/y.png")} /> 
-			</button>
-		  </div>
-		);
-	}
-}
-
-			
-
-class Projects extends React.Component {
-		 state = {
-		    response: ''
-		  };
+		this.state = {
+		  data: null,
+		};
+	  }
 
 	componentDidMount() {
-		 // this.callApi()
-	      // .then(res => this.setState({ response: res.express }))
-	      // .catch(err => console.log(err));
-  				fetch("/data/projects")
-				.then(res=>res.json())
-				.then((data)=> {
-					console.log(data);
-					this.setState({response: data.express})
-				})
+		var projectTab = []
+		 fetch("/data/projects")
+	  .then(response => response.json())
+	  .then(data => {
+			this.setState({ data })
+			console.log(this.state.data.projects);
+			for (var i = this.state.data.projects.length - 1; i >= 0; i--) {
+				const projects = <Project key={this.state.data.projects[i].id} data={this.state.data.projects[i]}  />
+				projectTab.push(projects)
+				this.setState({projectsComponents: projectTab})
+			}
+
+	  });
 	}
-
-	// callApi = async () => {
- //    const response = await fetch('/api/hello');
- //    const body = await response.json();
-
- //    if (response.status !== 200) throw Error(body.message);
-
- //    	return body;
- //  	}
-
-
 
 	render() {
 		return (
-
-			<div className="Project" key={"5"}  id={"5"}>
-				<div>
-					<a href={"5"} target="_blank"> <img src={"5"} alt="Web site" /> </a>
-					<button type="submit" value="Send" className="btnInfo" >+ Plus d'info </button>
+			<div className="Projects" id="Projects">
+				<div className="BlockPrincipal">
+					<h1 className="banner">Projects</h1>
+					{this.state.projectsComponents}
 				</div>
-				<div>
-					<div>
-						<p>{"desd"}</p>
-						<p>{} <br/><br/> {'ur'}</p>
-						<p>{}</p>
-						<BtnClap onClick={this.MoreApplose} />	
+				
+				<div className="NextPageBlock">
+					<div className="NextPage"> 
+							<Link to='/Presentation'> {"<"} </Link>
+						</div>
+						<div className="NextPage">
+							<Link to='/Contact'> > </Link>   
+						</div>
 					</div>
-				</div>
 			</div>
-		)
+		);
 	}
-}
+};
 
-export default Projects
+
+// console.log(projects)
+
+export default ProjectsWrap
+

@@ -1,33 +1,57 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-import Projects from './Projects.js'
-import '../css/Projects.css'
 
-class ProjectsWrap extends React.Component {
+var applose = 0
 
-	render() {
+class BtnClap extends React.Component {
+	constructor(props) {
+			super(props)
+			this.state = {applose: this.props.applose}
+			this.MoreApplose = this.MoreApplose.bind(this);
+		}
+
+
+		MoreApplose() {
+			var newApplose = this.state.applose + 1
+			this.setState({applose: newApplose})
+			// console.log(this.state.applose)
+			// console.log(ProjectsInfos[0].apploseNb)
+		}
+
+		render() {
 		return (
-			<div className="Projects" id="Projects">
-				<div className="BlockPrincipal">
-					<h1 className="banner">Projects</h1>
-					<Projects />
-				</div>
-				
-				<div className="NextPageBlock">
-					<div className="NextPage"> 
-							<Link to='/Presentation'> {"<"} </Link>
-						</div>
-						<div className="NextPage">
-							<Link to='/Contact'> > </Link>   
-						</div>
-					</div>
-			</div>
+		  <div className="btnClap">
+		  	<p> {this.state.applose} </p>
+		    <button onClick={this.MoreApplose}>
+				<img src={require("../../img/y.png")} /> 
+			</button>
+		  </div>
 		);
 	}
-};
+}
 
+			
 
-// console.log(projects)
+class Project extends React.Component {
+	render() {
+		return (
 
-export default ProjectsWrap
+			<div className="Project" id={this.props.data.id}>
+				<div>
+					<a href={this.props.data.link} target="_blank"> <img src={this.props.data.img} alt="Web site" /> </a>
+					<button type="submit" value="Send" className="btnInfo" >+ Plus d'info </button>
+					{console.log("props",this.props)}
+				</div>
+				<div>
+					<div>
+						<p>{this.props.data.name}</p>
+						<p>{this.props.data.pour} <br/><br/> {this.props.data.avec}</p>
+						<p></p>
+						<BtnClap onClick={this.MoreApplose} applose={this.props.data.apploseNb} />	
+					</div>
+				</div>
+			</div>
+		)
+	}
+}
 
+export default Project
