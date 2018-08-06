@@ -54,17 +54,17 @@ class Header extends React.Component {
 						<li className="elmParentLevel2">
 							<Link to='/Projects'>Projects</Link> 
 							<ul className="level2">
-								<li className="smooth">
+								<li>
 									<Link to={'/Projects#internaxx.com'} >  
 										internaxx.com 
 									</Link>
 								</li>
-								<li className="smooth">
+								<li>
 									<Link to={'/Projects#lokae.com'} >  
 										lokae.com
 									</Link>
 								</li>
-								<li className="smooth">
+								<li>
 									<Link to={'/Projects#pluspresdesoi.fr'} > 
 										pluspresdesoi.fr
 									</Link>
