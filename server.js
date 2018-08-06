@@ -1,6 +1,15 @@
 const express = require('express');
 const fs = require('fs');
-// const MongoClient = require('mongodb').MongoClient;
+// import createDB from "./demo_create_mongo_db.js"
+
+const MongoClient = require('mongodb').MongoClient;
+var mongoose = require("mongoose");
+
+mongoose.Promise = global.Promise;
+mongoose.connect("mongodb://localhost:27017/node-demo");
+
+
+// console.log(MongoClient)
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -10,7 +19,6 @@ var projects = JSON.parse(fs.readFileSync('projects.json'));
 
 app.get('/data/projects', (req, res) => {
 	res.send({  projects});
-	console.log(projects);  
 });
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
