@@ -35,7 +35,7 @@ class Project extends React.Component {
 	render() {
 		return (
 
-			<div className="Project" id={this.props.data.id}>
+			<div className="Project" id={this.props.data.name}>
 				<div>
 					<a href={this.props.data.link} target="_blank"> <img src={this.props.data.img} alt="Web site" /> </a>
 					<button type="submit" value="Send" className="btnInfo" >+ Plus d'info </button>

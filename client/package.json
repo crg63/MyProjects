@@ -13,6 +13,7 @@
     "react-dom": "^15.6.1",
     "react-google-auth": "^0.4.1",
     "react-router-dom": "^4.2.2",
+    "react-router-hash-link": "^1.2.0",
     "react-scripts": "1.0.13",
     "video-react": "^0.9.4"
   },
@@ -21,7 +22,6 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },"proxy": "http://localhost:5000/"
+  },
+  "proxy": "http://localhost:5000/"
 }
-
-
