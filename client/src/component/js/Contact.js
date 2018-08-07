@@ -33,9 +33,11 @@ class Contact extends React.Component {
 
 							<div className="subject">
 								<label>Subject</label>
-								<textarea  required className="formField" cols="10" rows="2" componentClass="textarea" placeholder="Write your message" />
+								<textarea  required className="formField" name="message" cols="10" rows="2" componentClass="textarea" placeholder="Write your message" />
 							</div>
 							<div  className="submit">
+								<input type="hidden" name="_next" value="http://localhost:3000/#/Contact" />
+								<input type="hidden" name="_language" value="fr" />
 								<button type="submit" value="Send"> <FontAwesomeIcon icon="paper-plane" className="paper-plane" /> Submit </button>
 							</div>
 		 
