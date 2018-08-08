@@ -14,28 +14,18 @@ class ProjectsWrap extends React.Component {
 
 	componentDidMount() {
 		var projectTab = []
-		 fetch("/data/projects")
+	   fetch("https://api.mlab.com/api/1/databases/projects/collections/projects?apiKey=fF9iSxFIZA8zMgnrw9eNdbLGakDxQx1V")
 	  .then(response => response.json())
 	  .then(data => {
 			this.setState({ data })
-			console.log(this.state.data.projects);
-			for (var i = this.state.data.projects.length - 1; i >= 0; i--) {
-				const projects = <Project key={this.state.data.projects[i].id} data={this.state.data.projects[i]}  />
+			console.log(this.state.data);
+			for (var i = this.state.data.length - 1; i >= 0; i--) {
+				const projects = <Project key={this.state.data[i].id} data={this.state.data[i]}  />
+				console.log(this.state.data[i]);
 				projectTab.push(projects)
 				this.setState({projectsComponents: projectTab})
 			}
-
 	  });
-/*
-	   fetch("mongodb://floocrg:Fsimpson78@ds139219.mlab.com:39219/projects")
-	  .then(response => response.json())
-	  .then(data => {
-				console.log(data)
-			
-
-	  });*/
-
-
 	}
 
 	render() {
