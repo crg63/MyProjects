@@ -26,6 +26,16 @@ class ProjectsWrap extends React.Component {
 			}
 
 	  });
+/*
+	   fetch("mongodb://floocrg:Fsimpson78@ds139219.mlab.com:39219/projects")
+	  .then(response => response.json())
+	  .then(data => {
+				console.log(data)
+			
+
+	  });*/
+
+
 	}
 
 	render() {
