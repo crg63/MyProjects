@@ -31,8 +31,14 @@ class Presentation extends React.Component {
 			{
 					// Proposer une partie site web, une partie email et une partie autre
 				}
+				Descrption bientôt disponible. 
+				Post haec indumentum regale quaerebatur et ministris fucandae purpurae tortis confessisque pectoralem tuniculam sine manicis textam, Maras nomine quidam inductus est ut appellant Christiani diaconus, cuius prolatae litterae scriptae Graeco sermone ad Tyrii textrini praepositum celerari speciem perurgebant quam autem non indicabant denique etiam idem ad usque discrimen vitae vexatus nihil fateri conpulsus est.
+				Post haec indumentum regale quaerebatur et ministris fucandae purpurae tortis confessisque pectoralem tuniculam sine manicis textam, Maras nomine quidam inductus est ut appellant Christiani diaconus, cuius prolatae litterae scriptae Graeco sermone ad Tyrii textrini praepositum celerari speciem perurgebant quam autem non indicabant denique etiam idem ad usque discrimen vitae vexatus nihil fateri conpulsus est.
+				Maost haec indumentum regale quaerebatur et ministris fucandae purpurae tortis confessisque pectoralem tuniculam sine manicis textam larc istris fucandae purpurae.
 
-				Développeur web, employé et auto-entrepreuneur,
+
+
+				{/*Développeur web, employé et auto-entrepreuneur,
 				je vous proposes mes compétances. 
 
 				Créer un site web
@@ -58,7 +64,7 @@ class Presentation extends React.Component {
 				<br/><br/>
 				Email marketing
 
-				Je créer vos emails marketing, responsive et compatible avec tout les services mails. 
+				Je créer vos emails marketing, responsive et compatible avec tout les services mails. */}
 
 				</p>
 				</div>
