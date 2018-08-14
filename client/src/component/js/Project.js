@@ -1,6 +1,6 @@
 import React from 'react'
 
-var applose = 0
+var nbOfComponentMounted = -1
 
 class BtnClap extends React.Component {
 	constructor(props) {
@@ -9,13 +9,47 @@ class BtnClap extends React.Component {
 			this.MoreApplose = this.MoreApplose.bind(this);
 		}
 
+	// componentDidMount() {
+	// 	fetch("https://api.mlab.com/api/1/databases/projects/collections/projects?f={%22apploseNb%22:%201}&apiKey=fF9iSxFIZA8zMgnrw9eNdbLGakDxQx1V", {method: 'GET'})
+	// 	.then(res => res.json())
+	// 	.then(data => {
+	// 		nbOfComponentMounted += 1
+	// 		if (nbOfComponentMounted === data.length) {
+	// 			nbOfComponentMounted = 0
+	// 		}
+	// 		this.setState({ applose: 0 })
+	//   });
+	// 	}
 
-		MoreApplose() {
-			var newApplose = this.state.applose + 1
-			this.setState({applose: newApplose})
-			// console.log(this.state.applose)
-			// console.log(ProjectsInfos[0].apploseNb)
-		}
+	MoreApplose() {
+		// var newApplose = this.state.applose + 1
+		// this.setState({applose: newApplose})
+		fetch('/clicked', {method: 'POST'})
+		.then(function(response) {
+			if(response.ok) {
+				console.log('click was recorded');
+				return;
+			}
+			throw new Error('Request failed.');
+		})
+		.catch(function(error) {
+			console.log(error);
+		});
+
+		setInterval(function() {
+			fetch('/clicks', {method: 'GET'})
+			.then(function(response) {
+				if(response.ok) return response.json();
+				throw new Error('Request failed.');
+			})
+			.then(function(data) {
+				document.getElementById('counter').innerHTML = `Button was clicked ${data.length} times`;
+			})
+			.catch(function(error) {
+				console.log(error);
+			});
+		}, 1000);
+	}
 
 		render() {
 		return (
@@ -36,17 +70,17 @@ class Project extends React.Component {
 		return (
 
 			<div className="Project" id={this.props.data.name}>
-				<div>
+				<div className="imgProject">
 					<a href={this.props.data.link} target="_blank"> <img src={this.props.data.img} alt="Web site" /> </a>
-					<button type="submit" value="Send" className="btnInfo" >+ Plus d'info </button>
-					{console.log("props",this.props)}
+					{/*<button type="submit" value="Send" className="btnInfo" >+ Plus d'info </button>*/}
+					{/*<p id="counter"> </p> */}
 				</div>
-				<div>
+				<div className="infoProject">
 					<div>
-						<p>{this.props.data.name}</p>
-						<p>{this.props.data.pour} <br/><br/> {this.props.data.avec}</p>
+						<a href={this.props.data.link} target="_blank"> <p className="titleProject">{this.props.data.name}</p> </a>
+						<p>Réalisé avec: {this.props.data.avec}</p>
 						<p></p>
-						<BtnClap onClick={this.MoreApplose} applose={this.props.data.apploseNb} />	
+						{/*<BtnClap onClick={this.MoreApplose} applose={this.props.data.apploseNb} />	*/}
 					</div>
 				</div>
 			</div>

@@ -4,8 +4,7 @@ html,
 body,
 #root,
 #root > div,
-main,
-.Presentation {
+main {
 	height: 101%;
 }
 
@@ -55,4 +54,5 @@ h1 {
 .Presentation h1,
 .Contact h1 {
 	color: #FFF;
+	font-size: 3em;
 }

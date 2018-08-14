@@ -1,10 +1,9 @@
 .Presentation {
-	background-image:url(https://images.pexels.com/photos/196658/pexels-photo-196658.jpeg?w=1260&h=750&dpr=2&auto=compress&cs=tinysrgb);
-	background-position-x: 10%;
-	width: 100%;
-    height: 100%;
-	background-position: center;
-	background-repeat: no-repeat;
+	background-image:url(https://c.pxhere.com/photos/9f/80/apple_blur_book_boss_brand_business_computer_data-1174505.jpg!d);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 /* _________ Bloc principal _________ */

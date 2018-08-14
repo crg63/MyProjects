@@ -8,7 +8,7 @@ class Presentation extends React.Component {
 		return (
 			<div className="Presentation" >
 
-			<h1></h1>
+			<h1>Presentation</h1>
 
 			{
 				// Mettre une image de ma tête
@@ -62,10 +62,11 @@ class Presentation extends React.Component {
 
 				</p>
 				</div>
-
-				<div className="NextPage">   
-				<Link to='/Projects'> > </Link>  
-				</div>
+					<div className="NextPageBlock">
+						<div className="NextPage">   
+							<Link to='/Projects'> > </Link>  
+						</div>
+					</div>
 				</div>
 				)
 			}

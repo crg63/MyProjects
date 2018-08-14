@@ -14,7 +14,7 @@
 	background: #222;
 	border-radius: 5px;
 	color: #000;
-	width: 80%;
+	width: 70%;
 	margin: auto;
 	margin-bottom: 20px;
 	background-color: #fff;
@@ -30,12 +30,12 @@
     justify-content: space-between;
 }
 
-.Project > div > div {
+.infoProject > div {
 	text-align: right;
 	display: flex;
     flex-direction: column;
     height: 100%;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 
 .Project div div > div > * {
@@ -54,14 +54,16 @@
 	border-radius: 50%;
 }
 
-.Project div > div > p:first-child {
-	text-align: center;
+.titleProject {
 	padding: 0;
+	font-size: 2em !important;
+	font-weight: bold;
 }
 
-.Project div > div > p {
+.infoProject p {
 	text-align: left;
 	padding-left: 50px;
+	font-size: 1.3em;
 }
 
 .Project div div div p {

@@ -18,10 +18,10 @@ class ProjectsWrap extends React.Component {
 	  .then(response => response.json())
 	  .then(data => {
 			this.setState({ data })
-			console.log(this.state.data);
+			// console.log(this.state.data);
 			for (var i = this.state.data.length - 1; i >= 0; i--) {
 				const projects = <Project key={this.state.data[i].id} data={this.state.data[i]}  />
-				console.log(this.state.data[i]);
+				// console.log(this.state.data[i]);
 				projectTab.push(projects)
 				this.setState({projectsComponents: projectTab})
 			}
