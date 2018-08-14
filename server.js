@@ -68,39 +68,31 @@ var projectSchema =  mongoose.Schema({
 	pour: String,
 	avec: String,
 	description: String,
-	img: { data: Buffer, contentType: String }
-
-})
-
-var contactSchema =  mongoose.Schema({
-	LastName: String,
-	FirstName: String,
-	Email: String,
-	Subject: String
+	img: { data: Buffer, contentType: String },
+	apploseNb: 0
 })
 
 var db
 
-
 MongoClient.connect(urlmongo, (err, client) => {
-  if (err) return console.log(err)
-  db = client.db('projects') // whatever your database name is
-  app.listen(3001, () => {
-    console.log('listening on 3001')
-  })  
+	if (err) return console.log(err)
+	db = client.db('projects') // whatever your database name is
+	app.listen(3001, () => {
+		console.log('listening on 3001')
+	})  
 })
 
 app.post('/projects', (req, res) => {
-  db.collection('projects').save(req.body, (err, result) => {
-    console.log(req.body)
-    if (err) return console.log(err)
-    console.log('saved to database')
-    res.redirect('/#/Contact')
-  })
+	db.collection('projects').save(req.body, (err, result) => {
+		console.log(req.body)
+		if (err) return console.log(err)
+		console.log('saved to database')
+		res.redirect('/#/Contact')
+	})
 })
 
 app.get('/', (req, res) => {
-  var cursor = db.collection('projects').find()
+	var cursor = db.collection('projects').find()
 })
 
 // db.collection('projects').find().toArray(function(err, results) {
@@ -116,6 +108,37 @@ app.get('/', (req, res) => {
 
 
 const port = process.env.PORT || 5000;
+// add a document to the DB collection recording the click event
+
+app.post('/clicked', (req, res) => {
+	const click = {apploseNb: new Date()};
+	console.log(click);
+	// console.log(db);
+
+	db.collection('projects').updateOne({ a : 2 }
+    , { $set: { b : 1 } }, function(err, result) {
+    assert.equal(err, null);
+    assert.equal(1, result.result.n);
+    console.log("Updated the document with the field a equal to 2");
+    callback(result);
+  }); 
+  
+	db.collection('projects').save(click, (err, result) => {
+		if (err) {
+			return console.log(err);
+		}
+		console.log('click added to db');
+		res.sendStatus(201);
+	});
+});
+
+// get the click data from the database
+app.get('/clicks', (req, res) => {
+	db.collection('clicks').find().toArray((err, result) => {
+		if (err) return console.log(err);
+		res.send(result);
+	});
+});
 
 // let rawdata = fs.readFileSync('projects.json');  
 var projects = JSON.parse(fs.readFileSync('projects.json'));  
