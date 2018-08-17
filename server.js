@@ -77,7 +77,7 @@ var db
 MongoClient.connect(urlmongo, (err, client) => {
 	if (err) return console.log(err)
 	db = client.db('projects') // whatever your database name is
-	app.listen(3001, () => {
+	app.listen(process.env.PORT || 3000;, () => {
 		console.log('listening on 3001')
 	})  
 })
