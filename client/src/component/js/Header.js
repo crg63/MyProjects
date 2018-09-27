@@ -56,19 +56,19 @@ class Header extends React.Component {
 							<ul className="level2">
 								<li>
 									<Link to={'/Projects#pluspresdesoi.fr'} > 
-										pluspresdesoi.fr
+										pluspresdesoi
 									</Link>
 								</li>
 								<li>
 									<Link to={'/Projects#internaxx.com'} >  
-										internaxx.com 
+										internaxx 
 									</Link>
 								</li>
-								{/*<li>
-									<Link to={'/Projects#lokae.com'} >  
-										lokae.com
+								<li>
+									<Link to={'/Projects#e-messagers.afm-telethon.fr'} >  
+										e-messagers
 									</Link>
-								</li>*/}
+								</li>
 							</ul>
 						</li>
 						<li>
