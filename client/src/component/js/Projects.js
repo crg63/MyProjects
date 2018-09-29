@@ -8,22 +8,24 @@ class ProjectsWrap extends React.Component {
 		super(props);
 
 		this.state = {
-		  data: null,
+		  data: 0,
 		};
 	  }
 
 	componentDidMount() {
 		var projectTab = []
-	   fetch("https://api.mlab.com/api/1/databases/projects/collections/projects?apiKey=fF9iSxFIZA8zMgnrw9eNdbLGakDxQx1V")
+	  fetch("https://api.mlab.com/api/1/databases/projects/collections/projects?apiKey=fF9iSxFIZA8zMgnrw9eNdbLGakDxQx1V")
 	  .then(response => response.json())
 	  .then(data => {
 			this.setState({ data })
 			// console.log(this.state.data);
+			
 			for (var i = this.state.data.length - 1; i >= 0; i--) {
 				const projects = <Project key={this.state.data[i].id} data={this.state.data[i]}  />
-				// console.log(this.state.data[i]);
-				projectTab.push(projects)
-				this.setState({projectsComponents: projectTab})
+				
+					projectTab.push(projects)
+					this.setState({projectsComponents: projectTab})
+				
 			}
 	  });
 	}
