@@ -23,13 +23,19 @@ import '../css/Header.css'
 
 // test()
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", () => {
 	var barsMenu = document.querySelector(".bars")
 	var header = document.querySelector(".Header")
 	barsMenu.addEventListener('click', () => {
 		header.classList.toggle('active')
 	})
-
+	if (window.matchMedia("(max-width: 767px)").matches) {
+		var projectMenu = document.querySelector(".elmParentLevel2")
+		projectMenu.addEventListener('click', () => {
+			projectMenu.classList.toggle('active')
+		})
+		console.log('ok');
+	}
 })
 
 // const projectsList = ProjectsInfos.map( (project) =>
