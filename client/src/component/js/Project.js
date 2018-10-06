@@ -66,6 +66,10 @@ class BtnClap extends React.Component {
 			
 
 class Project extends React.Component {
+	componentDidMount() {
+		document.querySelector(".Projects").style.height = 'initial'
+	}
+
 	render() {
 		return (
 
