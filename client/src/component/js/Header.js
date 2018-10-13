@@ -23,13 +23,19 @@ import '../css/Header.css'
 
 // test()
 
-document.addEventListener("DOMContentLoaded", function(event) {
+document.addEventListener("DOMContentLoaded", () => {
 	var barsMenu = document.querySelector(".bars")
 	var header = document.querySelector(".Header")
 	barsMenu.addEventListener('click', () => {
 		header.classList.toggle('active')
 	})
-
+	if (window.matchMedia("(max-width: 767px)").matches) {
+		var projectMenu = document.querySelector(".elmParentLevel2")
+		projectMenu.addEventListener('click', () => {
+			projectMenu.classList.toggle('active')
+		})
+		console.log('ok');
+	}
 })
 
 // const projectsList = ProjectsInfos.map( (project) =>
@@ -55,20 +61,30 @@ class Header extends React.Component {
 							<Link to='/Projects'>Projects</Link> 
 							<ul className="level2">
 								<li>
-									<Link to={'/Projects#pluspresdesoi.fr'} > 
-										pluspresdesoi.fr
+									<Link to={'/Projects#accelerateurs-victoires'} >  
+										accelerateurs-victoires
 									</Link>
 								</li>
 								<li>
-									<Link to={'/Projects#internaxx.com'} >  
-										internaxx.com 
+									<Link to={'/Projects#donsms'} >  
+										donsms
 									</Link>
 								</li>
-								{/*<li>
-									<Link to={'/Projects#lokae.com'} >  
-										lokae.com
+								<li>
+									<Link to={'/Projects#e-messagers'} >  
+										e-messagers
 									</Link>
-								</li>*/}
+								</li>
+								<li>
+									<Link to={'/Projects#internaxx'} >  
+										internaxx 
+									</Link>
+								</li>
+								<li>
+									<Link to={'/Projects#pluspresdesoi'} > 
+										pluspresdesoi
+									</Link>
+								</li>
 							</ul>
 						</li>
 						<li>
