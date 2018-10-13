@@ -13,9 +13,8 @@
 
 .Project {
 	background: #222;
-	border-radius: 5px;
 	color: #000;
-	width: 70%;
+	width: 100%;
 	margin: auto;
 	margin-bottom: 20px;
 	background-color: #fff;
@@ -104,6 +103,8 @@
 @media (min-width: 600px) {
 	.Project {
 		flex-direction: row;
+		width: 70%;
+		border-radius: 5px;
 	}
 	.Project > div {
 		display: inline-block;
