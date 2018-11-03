@@ -55,10 +55,10 @@ class Header extends React.Component {
 				<nav>
 					<ul>
 						<li>
-							<Link to='/Presentation'>Presentation</Link>
+							<Link to='/Presentation'>Présentation</Link>
 						</li>
 						<li className="elmParentLevel2">
-							<Link to='/Projects'>Projects</Link> 
+							<Link to='/Projects'>Mes réalisations</Link> 
 							<ul className="level2">
 								<li>
 									<Link to={'/Projects#accelerateurs-victoires'} >  
