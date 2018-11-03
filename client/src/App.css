@@ -1,0 +1,57 @@
+@import url("https://fonts.googleapis.com/css?family=Karma|Lilita+One");
+html,
+body,
+#root,
+#root > div,
+main {
+  height: 101%; 
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  overflow-x: hidden; 
+}
+
+a,
+a:hover,
+a:active,
+a:focus {
+  text-decoration: none; 
+}
+
+p {
+  margin-bottom: 0; 
+}
+
+li {
+  list-style: none; 
+}
+
+h1 {
+  text-align: center;
+  font-family: 'Karma', serif; 
+}
+
+.App {
+  text-align: center; 
+}
+
+#root {
+  /*overflow: hidden;*/ }
+
+.Presentation,
+.Projects,
+.Contact {
+  position: relative;
+  padding-top: 25px; 
+}
+
+.Projects h1,
+.Presentation h1,
+.Contact h1 {
+  color: #FFF;
+  font-size: 3em; 
+}
+
