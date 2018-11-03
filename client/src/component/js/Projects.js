@@ -21,7 +21,7 @@ class ProjectsWrap extends React.Component {
 			// console.log(this.state.data);
 			
 			for (var i = this.state.data.length - 1; i >= 0; i--) {
-				const projects = <Project key={this.state.data[i].id} data={this.state.data[i]}  />
+				const projects = <Project key={this.state.data[i]._id} data={this.state.data[i]}  />
 				
 					projectTab.push(projects)
 					this.setState({projectsComponents: projectTab})
@@ -34,7 +34,7 @@ class ProjectsWrap extends React.Component {
 		return (
 			<div className="Projects" id="Projects">
 				<div className="BlockPrincipal">
-					<h1 className="banner">Projects</h1>
+					<h1 className="banner">Mes réalisations</h1>
 					{this.state.projectsComponents}
 				</div>
 				
