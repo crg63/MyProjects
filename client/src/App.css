@@ -4,54 +4,62 @@ body,
 #root,
 #root > div,
 main {
-  height: 101%; 
+	height: 101%; 
+}
+
+html {
+	scroll-behavior: smooth;
 }
 
 body {
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
-  overflow-x: hidden; 
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	overflow-x: hidden; 
 }
 
 a,
 a:hover,
 a:active,
 a:focus {
-  text-decoration: none; 
+	text-decoration: none; 
 }
 
 p {
-  margin-bottom: 0; 
+	margin-bottom: 0; 
 }
 
 li {
-  list-style: none; 
+	list-style: none; 
 }
 
-h1 {
-  text-align: center;
-  font-family: 'Karma', serif; 
+h1,
+h2 {
+	text-align: center;
+	font-family: 'Karma', serif; 
+}
+
+h3 {
+	max-width: 100% !important;
 }
 
 .App {
-  text-align: center; 
+	text-align: center; 
 }
 
 #root {
-  /*overflow: hidden;*/ }
+/*overflow: hidden;*/ }
 
 .Presentation,
 .Projects,
 .Contact {
-  position: relative;
-  padding-top: 25px; 
+	position: relative;
+	padding-top: 30px; 
 }
 
 .Projects h1,
-.Presentation h1,
 .Contact h1 {
-  color: #FFF;
-  font-size: 3em; 
+	color: #FFF;
+	font-size: 3em; 
 }
 
