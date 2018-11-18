@@ -1,4 +1,3 @@
-
 import React from 'react'
 import '../css/Contact.css'
 import img from "../../img/phone-hand.png"
@@ -6,10 +5,8 @@ import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 class Contact extends React.Component {
-
 	render() {
 		return (
-
 			<div className="Contact">
 				<div className="BlockPrincipal">
 					<h1> Contact</h1>
@@ -40,9 +37,7 @@ class Contact extends React.Component {
 							</div>
 							<input type="hidden" name="_language" value="fr" />
 							<input type="hidden" name="_next" value="http://www.site-web-france.com/#/Contact" />
-		 					{/* RGPD : En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées dans le cadre de la demande de contact et de la relation commerciale qui peut en découler.*/}
 						</div>
-
 					<div className="NextPage">   
 						<Link to='/Projects'> {"<"} </Link>  
 					</div>

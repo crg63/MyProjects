@@ -8,27 +8,23 @@ class ProjectsWrap extends React.Component {
 		super(props);
 
 		this.state = {
-		  data: 0,
+			data: 0,
 		};
-	  }
+	}
 
 	componentDidMount() {
 		var projectTab = []
-	  fetch("https://api.mlab.com/api/1/databases/projects/collections/projects?apiKey=fF9iSxFIZA8zMgnrw9eNdbLGakDxQx1V")
-	  .then(response => response.json())
-	  .then(data => {
-			this.setState({ data })
-			// console.log(this.state.data);
-			
+		fetch("https://api.mlab.com/api/1/databases/projects/collections/projects?apiKey=fF9iSxFIZA8zMgnrw9eNdbLGakDxQx1V")
+		.then(response => response.json())
+		.then(data => {
+			this.setState({ data })			
 			for (var i = this.state.data.length - 1; i >= 0; i--) {
 				const projects = <Project key={this.state.data[i]._id} data={this.state.data[i]}  />
-				
-					projectTab.push(projects)
-					this.setState({projectsComponents: projectTab})
-				
+				projectTab.push(projects)
+				this.setState({projectsComponents: projectTab})
 			}
-	  });
-	}
+		});
+	  }
 
 	render() {
 		return (
@@ -37,7 +33,6 @@ class ProjectsWrap extends React.Component {
 					<h1 className="banner">Mes réalisations</h1>
 					{this.state.projectsComponents}
 				</div>
-				
 				<div className="NextPageBlock">
 					<div className="NextPage"> 
 							<Link to='/Presentation'> {"<"} </Link>
@@ -51,8 +46,4 @@ class ProjectsWrap extends React.Component {
 	}
 };
 
-
-// console.log(projects)
-
 export default ProjectsWrap
-

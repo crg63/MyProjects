@@ -83,10 +83,10 @@
 
 	.contactForm {
 		position: absolute;
-	    bottom: 150px;
-	    left: 0;
-	    right: 0;
-	    padding: 10px;
+		bottom: 150px;
+		left: 0;
+		right: 0;
+		padding: 10px;
 	}
 
 	.contactForm div {
@@ -122,7 +122,6 @@
 	.Contact textarea::placeholder {
 		color: #fff;
 	}
-
 
 	.Contact .NextPage {
 		top:10px;

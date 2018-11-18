@@ -26,16 +26,16 @@
 .Project > div {
 	width: 100%;
 	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .infoProject > div {
 	text-align: right;
 	display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-evenly;
 }
 
 .Project div div > div > * {
@@ -65,11 +65,11 @@
 .Project div div div p {
 	border-radius: 5px;
 	margin: 0 1rem 1rem 0;
-    color: #fff;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    vertical-align: bottom;
+	color: #fff;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	vertical-align: bottom;
 }
 
 .btnInfo {

@@ -2,14 +2,12 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import '../css/Presentation.css'
 import '../css/NextPage.css'
-
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCogs, faMobileAlt, faTabletAlt, faDesktop, faBrain, faComments, faCode, faEnvelope, faAt} from '@fortawesome/free-solid-svg-icons'
 library.add(faCogs, faMobileAlt, faTabletAlt, faDesktop, faBrain, faComments, faCode, faEnvelope, faAt)
 
 class Presentation extends React.Component {
-
 	componentDidMount() {
 		var d = document.querySelectorAll(".Intro")		
 		var timer = setInterval(function(){
@@ -20,7 +18,6 @@ class Presentation extends React.Component {
 	render() {
 		return (
 			<section className="Presentation" >
-
 				<section className="Intro">
 					<div className="typewriter"> 
 						<h1>Création de Newsletter et de site internet</h1>
@@ -29,8 +26,6 @@ class Presentation extends React.Component {
 						<p>Une idée ? Un projet ? <br /><a href="https://site-web-france.herokuapp.com/contact">contacter moi</a> !</p>
 					</div>
 				</section> 
-				{/** <img src={img} /> **/}
-
 				<div className="Competence">
 					<div>
 						<div className="icone">
@@ -44,8 +39,6 @@ class Presentation extends React.Component {
 								La Newsletter aussi appelé email marketing ou emailing est complémentaire à votre site web. Vous pouvez organiser des ventes promotionnelles,
 								augmenter le trafic de votre site internet, avoir une publicité personnalisée...
 							</p>
-						{/* Vous voulez vous y mettre, ou vous constatez des résultats peu probants suite à vos campagnes d’emailing ? Laissez-moi
-								apporter mon expertise de développeur. Je vous proposes un code review et une optimisation sur vos emails. Ainsi que des templates emailing qui on fait leur preuves !*/}
 						</section>
 					</div>
 					<div>
@@ -61,11 +54,9 @@ class Presentation extends React.Component {
 								C'est une publicité partout 24h/24 et 7j/7. 
 								C'est avoir la possibilitée d'augmenter ça visibilité suivant la localisation de votre choix. 
 								La création d'un site internet est nécessaire pour la prospérité de votre activité dans le monde, en France ou dans votre ville.
-
 							</p>
 						</section>
 					</div>
-
 					<div>
 						<div className="icone">
 							<FontAwesomeIcon icon="cogs" className="cogs"/>
@@ -78,11 +69,9 @@ class Presentation extends React.Component {
 								La création d’un site internet est un invisstissement sur le long terme. 
 								Un site web doit être maintenu et mis à jour régulièrement pour des raisons de sécurité, de visibilité...
 								Comme pour une maison plus votre site restera sans maintenance plus il y aura du travail.
-
 							</p>
 						</section>
 					</div>
-
 				</div>
 				<section className="Description">
 					<h1> Développeur web / Intégrateur emailing freelance </h1>
@@ -107,7 +96,6 @@ class Presentation extends React.Component {
 							</p>
 						</section>
 					</div>
-
 					<div>
 						<div className="icone">
 							<FontAwesomeIcon icon="code" className="code"/>
@@ -121,7 +109,6 @@ class Presentation extends React.Component {
 							</p>
 						</section>
 					</div>
-
 					<div>
 						<div className="icone">
 							<FontAwesomeIcon icon="brain" className="brain"/>
@@ -135,36 +122,6 @@ class Presentation extends React.Component {
 					</div>
 
 				</div>
-
-				
-				{
-					// Proposer une partie site web, une partie email et une partie autre
-					/*Développeur web, employé et auto-entrepreuneur,
-					je vous proposes mes compétances. 
-
-					Créer un site web
-
-					Vous voulez créer un site ? Mettre en avant votre activitée ?
-					Ou vous avez un besoin de main d'oeuvre pour un projet ?
-					Je suis disponible, pour vos projets d'équipe ou pour de plus petits projets.
-
-					Pour votre entreprise il est important d'avoir une présence sur le web.
-					Cela vous rends disponibe, vous avez la possibiliter d'être contacté, de proposer vos services ou de montrer votre activité 24h sur 24h.
-					Votre site sur mesure adapter à votre activitée sera disponible sur mobile tabelette et ordinateur partout et tout le temps.
-
-					Vous avez déjà un site mais il se fait vieux ? Nous allons le remettre à neuf je vous proposes maintenance ou migration de votre site sur les technologies les plus récentes et modernes.
-
-					Mes points fort: 
-					- Des technologies moderne et adapter à votre activitée
-					- 
-					- La qualité du travail made in France
-					- Mon invisstissement dans votre projet
-					- Mes services pas cher, à bas prix.
-
-					Email marketing
-
-					Je créer vos emails marketing, responsive et compatible avec tout les services mails. */
-				}
 				<div className="NextPageBlock">
 					<div className="NextPage">   
 						<Link to='/Projects'> > </Link>  
