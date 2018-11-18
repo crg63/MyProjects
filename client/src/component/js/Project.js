@@ -2,6 +2,11 @@ import React from 'react'
 import SkyLight from 'react-skylight'
 import Clap from './Clap.js'
 
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faPlusCircle, faEye} from '@fortawesome/free-solid-svg-icons'
+library.add(faPlusCircle, faEye)
+
 var nbOfComponentMounted = -1
 
 class BtnClap extends React.Component {
@@ -19,7 +24,7 @@ class Project extends React.Component {
 			<div className="Project" id={this.props.data.name}>
 				<div className="imgProject">
 					<a href={this.props.data.link} target="_blank"> <img src={this.props.data.img} alt="Web site" /> </a>
-					<button onClick={() => this.simpleDialog.show()} className="btnInfo" >+ Plus d'info </button>
+					<button onClick={() => this.simpleDialog.show()} className="btnInfo" > En savoir <FontAwesomeIcon icon="plus-circle" className="plus-circle"/> </button>
 					<SkyLight hideOnOverlayClicked ref={ref => this.simpleDialog = ref} title={this.props.data.name}>
 			         {this.props.data.description}
 			        </SkyLight>
@@ -27,7 +32,7 @@ class Project extends React.Component {
 				</div>
 				<div className="infoProject">
 					<div>
-						<a href={this.props.data.link} target="_blank"> <p className="titleProject">{this.props.data.name}</p> </a>
+						<a href={this.props.data.link} target="_blank"> <p className="titleProject">{this.props.data.name} <FontAwesomeIcon icon="eye" className="eye"/></p> </a>
 						<p>Réalisé avec: {this.props.data.avec}</p>
 						<p></p>
 						{/*<BtnClap onClick={this.MoreApplose} applose={this.props.data.apploseNb} />	*/}

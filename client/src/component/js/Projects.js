@@ -34,7 +34,6 @@ class ProjectsWrap extends React.Component {
 		return (
 			<div className="Projects" id="Projects">
 				<div className="BlockPrincipal">
-					<h1 className="banner">Mes réalisations</h1>
 					{this.state.projectsComponents}
 				</div>
 				

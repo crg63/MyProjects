@@ -26,16 +26,16 @@
 .Project > div {
 	width: 100%;
 	display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .infoProject > div {
 	text-align: right;
 	display: flex;
-    flex-direction: column;
-    height: 100%;
-    justify-content: space-evenly;
+	flex-direction: column;
+	height: 100%;
+	justify-content: space-evenly;
 }
 
 .Project div div > div > * {
@@ -54,6 +54,10 @@
 	border-radius: 50%;
 }
 
+.titleProject {
+	text-decoration: underline;
+}
+
 .infoProject p {
 	text-align: left;
 	padding-left: 50px;
@@ -65,11 +69,11 @@
 .Project div div div p {
 	border-radius: 5px;
 	margin: 0 1rem 1rem 0;
-    color: #fff;
-    width: 25px;
-    height: 25px;
-    text-align: center;
-    vertical-align: bottom;
+	color: #fff;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	vertical-align: bottom;
 }
 
 .btnInfo {
@@ -79,6 +83,16 @@
 	color: #fff;
 	padding: 5px;
 	cursor: pointer;
+	font-size: 1.3em;
+}
+
+.plus-circle,
+.eye {
+	vertical-align: middle;
+}
+
+.eye {
+	color: rgba(96,106,164,0.2);
 }
 
 @keyframes low {
@@ -96,6 +110,7 @@
 
 }
 
+
 @media (min-width: 600px) {
 	.Project {
 		flex-direction: row;
@@ -107,6 +122,15 @@
 		flex-direction: column;
 		width: 50%;
 		vertical-align: bottom;
+	}
+	.btnInfo {
+		background-color: #606aa4;
+		border: none;
+		border-radius: 5px;
+		color: #fff;
+		padding: 5px;
+		width: 50%;
+		cursor: pointer;
 	}
 }
 
