@@ -9,7 +9,6 @@ class Contact extends React.Component {
 		return (
 			<div className="Contact">
 				<div className="BlockPrincipal">
-					<h1> Contact</h1>
 					<img src={img} />
 					<form className="contactForm" action="https://formspree.io/floriancargouet@gmail.com" method="POST"> 
 						<div>
