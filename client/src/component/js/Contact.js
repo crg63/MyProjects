@@ -17,30 +17,30 @@ class Contact extends React.Component {
 					<form className="contactForm" action="https://formspree.io/floriancargouet@gmail.com" method="POST"> 
 						<div>
 							<div>
-								<label>Last name</label>
-								<input required className="formField" id="Lname" type="text" name="name" placeholder="Martin" />
+								<label>Nom / Prénom *</label>
+								<input required className="formField" id="Lname" type="text" name="name" placeholder="Musk" />
 							</div>
 
 							<div>
-								<label>First name</label>
-								<input required className="formField" id="Fname" type="text" name="name" placeholder="Jean-Louis" />
+								<label>Téléphone</label>
+								<input className="formField" type="tel" placeholder="0667975717" />
 							</div>
 
 							<div>
-								<label>Email</label>
-								<input required className="formField" id="Fmail" name="_replyto" type="email" placeholder="jean-louis@mail.com" />
+								<label>Email *</label>
+								<input required className="formField" id="Fmail" name="_replyto" type="email" placeholder="elon.musk@spacex.com" />
 							</div>
 
 							<div className="subject">
-								<label>Subject</label>
-								<textarea  required className="formField" name="message" cols="10" rows="2" componentClass="textarea" placeholder="Write your message" />
+								<label>Sujet *</label>
+								<textarea  required className="formField" name="message" cols="10" rows="2" componentClass="textarea" placeholder="Ecrivez votre message" />
 							</div>
 							<div  className="submit">
-								<input type="hidden" name="_next" value="http://localhost:3000/#/Contact" />
-								<input type="hidden" name="_language" value="fr" />
-								<button type="submit" value="Send"> <FontAwesomeIcon icon="paper-plane" className="paper-plane" /> Submit </button>
+								<button type="submit" value="Send"> <FontAwesomeIcon icon="paper-plane" className="paper-plane" /> Envoyer </button>
 							</div>
-		 
+							<input type="hidden" name="_language" value="fr" />
+							<input type="hidden" name="_next" value="http://www.site-web-france.com/#/Contact" />
+		 					{/* RGPD : En soumettant ce formulaire, j’accepte que les informations saisies soient exploitées dans le cadre de la demande de contact et de la relation commerciale qui peut en découler.*/}
 						</div>
 
 					<div className="NextPage">   
