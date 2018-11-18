@@ -1,94 +1,237 @@
 .Presentation {
 	background-image:url("../../img/work.jpg");
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.Intro, 
+.Competence {
+	margin: 30px 0 0;
 }
 
 /* _________ Bloc principal _________ */
 
-.blocPesentation {
-	background-color: #FFF;
-	border-radius: 4px;
-	padding: 5%;
-	width: 65%;
-	margin: 50px auto;
-	min-width: 300px;
-}
-
-
-.blocPesentation p {
-	text-align: justify;
-	margin: auto;
-}
-
-
-/* _________ Animation type writer _________ */
-
-.typeWriterBg {
-	background: rgba(96, 106, 164, .7);
-	width: 100%;
-	max-width: 305px;
-	margin: auto;
-	border-radius: 4px;
-	margin: 20px auto;
-}
-
-.Presentation .typeWriter {
-	padding-left: 55px;
+.Intro {
+	background: #fff;
+	padding: 10px;
+	border-radius: 5px;
+	position: relative;
+	border: 3px solid rgb(96, 106, 164);
+	transition: all 0.5s linear 0s;
 	text-align: center;
+	margin: auto;
+	display: inline-block;
+	width: 90%;
+}
+
+.Intro a {
 	color: #000;
-	vertical-align: center;
+	text-decoration: underline;
 }
 
-.typeWriterTop{
-	border-radius: 4px 4px 0 0;
+.Intro > * {
+	font: 36px 'Karma', serif;
+	padding: 0;
 }
 
-.typeWriterBot {
-	border-radius: 0 0 4px 4px;
+.Intro  p {
+	display: none;
 }
 
-.animTypeWriter {
-	animation: typewriter 4s steps(32) 1s 1 normal both,
-	blinkTextCursor 600ms steps(32) infinite normal,
-	stop 600ms steps(32) 5s infinite normal;
-	margin-bottom: 0;
+.lightUp.Intro p {
+	display: initial;
 }
 
-.animTypeWriter2 {
-	animation: typewriter 4s steps(32) 5s 1 normal both,
-	blinkTextCursor 600ms steps(32) 5s infinite normal;
+.lightUp.Intro h1 {
+	display: none;
+}
+
+.lightUp.Intro:after {
+	background: #fff;
+	transition: all 0.5s linear 0s;
+}
+
+.lightUp.Intro:before {
+	background: #fff;
+	transition: all 0.5s linear 0s;
+}
+
+.lightUp.Intro {
+	transition: all 0.5s linear 0s;
 }
 
 
-@keyframes typewriter{
-	from{width: 0;}
-	to{width: 100%;}
+img {
+	width: 50px;
 }
 
-@keyframes blinkTextCursor{
-	from{border-right-color: rgba(000,000,000,.9);}
-	to{border-right-color: transparent;}
+.Competence {
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+	width: 90%;
 }
 
-@keyframes stop {
-	from { border-right-color: transparent;}
-	to{border-right-color: transparent;}
+.Competence > div {
+	height: 100%;
+	margin: 10px 0;
 }
 
-h4 {
-	border-right: 2px solid transparent;
-	white-space: nowrap;
-	overflow: hidden;
-	max-width: 200px;
+.Competence div section {
+	padding: 10px;
+	background: #fff;
+	border-radius: 0 0 5px 5px;
+}
+
+.Competence p {
+	text-align: justify;
+}
+
+.Competence h2 {
+	font-size: 1.2em;
+}
+
+.Competence .icone {
+	background: rgb(96, 106, 164);
+	border-radius: 5px 5px 0 0;
+	color: #fff;
 	text-align: center;
+	display: flex;
+	justify-content: space-evenly;
+	align-items: baseline;
+	padding: 10px;
 }
 
-/* _________ adjustment for xs screen _________ */
+.Description {
+	background: rgba(96, 106, 164, .8);
+	padding: 10px;
+	color: #fff;
+	margin: 20px 0 0;
+	text-align: justify;
+}
 
-@media (max-width: 400px) {
+.Description br {
+	display: none;
+}
+
+.Competence h1,
+.Description h1 {
+	font-size: 1.5em;
+}
+
+.cogs,
+.desktop,
+.brain,
+.comments,
+.code,
+.envelope,
+.at {
+	font-size: 4em;
+}
+
+.tablet-alt {
+	font-size: 3em;
+}
+
+.mobile-alt {
+	font-size: 2em;
+}
+
+@media (min-width: 768px) {
+
+	.Intro {
+		color: #fff;
+		background: none;
+		border: none;
+		height: 100px;
+		display: flex;
+		align-items: center;
+	}
+
+	.Intro a {
+		color: #fff;
+	}
+
+	.Intro br {
+		display: none;
+	}
+
+	.Competence {
+		display: flex;
+		justify-content: space-between;
+		flex-direction: row;
+		align-items: baseline;
+	}
+
+	.Competence > div {
+		width: 30%;
+		margin: 0;
+	}
+
+	.Description {
+		width: 50%;
+		border-radius: 5px;
+		margin: 40px 0 20px;
+		text-align: center;
+	}
+
+	.Description br {
+		display: initial;
+	}
+
+	.typewriter,
+	.typewriter2 {
+		overflow: hidden;
+		border-right: .15em solid orange;
+		white-space: nowrap;
+		margin: 0 auto; 
+		letter-spacing: .1em; 
+	}
+
+	.typewriter {
+		animation: 
+		typing 5s steps(40, end) 1s both,
+		delete 2s steps(40, end) 6s forwards,
+		blink-caret .5s step-end infinite;
+		max-width: 872px;
+	}
+
+	.typewriter2 {
+		animation: 
+		typing 5s steps(40, end) 1s both,
+		delete 2s steps(40, end) 6s forwards,
+		blink-caret .5s step-end infinite;
+		max-width: 735px;
+		display: none;
+	}
+
+	.Intro.lightUp .typewriter {
+		display: none;
+	}
+
+	.Intro.lightUp .typewriter2 {
+		display: initial;
+	}
+
+	@keyframes typing {
+		0% { width: 0 }
+		100% { width: 100% }
+	}
+
+	@keyframes delete {
+		100% { width: 0 }
+		0% { width: 100% }
+	}
+
+	@keyframes blink-caret {
+		from, to { border-color: transparent }
+		50% { border-color: orange }
+	}
 
 }
 
