@@ -37,9 +37,6 @@ class Contact extends React.Component {
 							<input type="hidden" name="_language" value="fr" />
 							<input type="hidden" name="_next" value="http://www.site-web-france.com/#/Contact" />
 						</div>
-					<div className="NextPage">   
-						<Link to='/Projects'> {"<"} </Link>  
-					</div>
 					</form>
 				</div>
 			</div>

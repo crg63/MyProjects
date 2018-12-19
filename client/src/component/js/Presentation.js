@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import '../css/Presentation.css'
-import '../css/NextPage.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCogs, faMobileAlt, faTabletAlt, faDesktop, faBrain, faComments, faCode, faEnvelope, faAt} from '@fortawesome/free-solid-svg-icons'
@@ -121,11 +120,6 @@ class Presentation extends React.Component {
 						</section>
 					</div>
 
-				</div>
-				<div className="NextPageBlock">
-					<div className="NextPage">   
-						<Link to='/Projects'> > </Link>  
-					</div>
 				</div>
 			</section>
 		)

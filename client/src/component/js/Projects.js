@@ -32,14 +32,6 @@ class ProjectsWrap extends React.Component {
 				<div className="BlockPrincipal">
 					{this.state.projectsComponents}
 				</div>
-				<div className="NextPageBlock">
-					<div className="NextPage"> 
-							<Link to='/Presentation'> {"<"} </Link>
-						</div>
-						<div className="NextPage">
-							<Link to='/Contact'> > </Link>   
-						</div>
-					</div>
 			</div>
 		);
 	}

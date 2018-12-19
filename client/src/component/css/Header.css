@@ -32,7 +32,7 @@
 }
 
 /* Menu de niveau 1 */
-nav {
+.Header nav {
 	position: relative;
 	display: none;
 }
@@ -104,7 +104,7 @@ nav {
 		display: none;
 	}
 
-	nav {
+	.Header nav {
 		display: block;
 	}
 

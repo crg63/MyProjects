@@ -58,6 +58,10 @@
 	text-decoration: underline;
 }
 
+.infoProject a:visited .eye {
+	color: rgba(96,106,164,0.2);
+}
+
 .infoProject p {
 	text-align: left;
 	padding-left: 50px;
@@ -92,7 +96,7 @@
 }
 
 .eye {
-	color: rgba(96,106,164,0.2);
+	color: rgba(96,106,164);
 }
 
 @keyframes low {
