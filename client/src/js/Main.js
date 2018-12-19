@@ -4,6 +4,7 @@ import Presentation from '../component/js/Presentation'
 import ProjectsWrap from '../component/js/Projects'
 import Contact from '../component/js/Contact'
 import Header from '../component/js/Header'
+import Footer from '../component/js/Footer'
 
 class Main  extends Component {
 	render() {
@@ -16,6 +17,7 @@ class Main  extends Component {
 					<Route path='/Projects' component={ProjectsWrap}/>
 					<Route path='/Contact' component={Contact}/>
 				</Switch>
+				<Footer />
 			</main>
 			);
 	}
