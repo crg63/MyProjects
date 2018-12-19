@@ -1,0 +1,25 @@
+.Footer * {
+	color: #000;
+}
+
+.Footer a {
+	text-decoration: underline;
+}
+
+.Footer ul {
+    display: flex;
+    justify-content: space-between;
+    margin: 15px;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+	.Footer {
+		display: flex;
+    	justify-content: space-between;
+	}
+
+	.Footer li {
+	    margin: 0 10px;
+	}
+}
