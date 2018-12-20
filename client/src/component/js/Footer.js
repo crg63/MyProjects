@@ -19,7 +19,7 @@ class Footer extends React.Component {
 					</ul>
 					<ul>
 						<li> © 2018 - Florian Cargouet  </li>|
-						<li> <a href="">Mention légale </a> </li>
+						<li> <a href="http://localhost:3000/CGU">Mention légale </a> </li>
 					</ul>
 			</footer>
 		)
