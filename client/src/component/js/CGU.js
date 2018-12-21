@@ -53,7 +53,7 @@ class CGU extends React.Component {
 						Florian Cargouet est propriétaire exclusif de tous les droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, tant sur la structure que sur les textes, images, graphismes, logo, icônes, sons, logiciels…
 						Toute reproduction totale ou partielle du site internet www.site-web-france.com, représentation, modification, publication, adaptation totale ou partielle de l'un quelconque de ces éléments, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de Florian Cargouet, propriétaire du site internet à l'email : floriancargouet@gmail.com, à défaut elle sera considérée comme constitutive d’une contrefaçon et passible de poursuite conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.
 					</p>
-										<br />	<br />	
+					<br />	<br />	
 					<p>
 						<b>
 							5. Liens hypertextes et cookies :
@@ -63,7 +63,7 @@ class CGU extends React.Component {
 						Le paramétrage du logiciel de navigation permet d’informer de la présence de cookie et éventuellement, de la refuser de la manière décrite à l’adresse suivante : <a href="http://www.cnil.fr"> www.cnil.fr</a>. 
 						L’utilisateur peut toutefois configurer le navigateur de son ordinateur pour refuser l’installation des cookies, sachant que le refus d'installation d'un cookie peut entraîner l’impossibilité d’accéder à certains services. Pour tout bloquage des cookies, tapez dans votre moteur de recherche : bloquage des cookies sous IE ou firefox et suivez les instructions en fonction de votre version.
 					</p>
-										<br />	<br />	
+					<br />	<br />	
 					<p>
 						<b>
 							6. Protection des biens et des personnes - gestion des données personnelles :
@@ -81,7 +81,6 @@ class CGU extends React.Component {
 						Le site www.site-web-france.com est en conformité avec le RGPD voir notre politique RGPD  Le site n'est pas déclaré à la CNIL car il ne recueille pas d'informations personnelles. .
 					</p>
 					<p>
-
 						Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.
 					</p>	
 				</div>
